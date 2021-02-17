@@ -1,0 +1,261 @@
+En se basant sur le fichier sql shema et shema figure:
+-- vous devez créer une base données, et imiter les requêtes dans le fichier sql shema.
+Exprimer les requêtes suivantes en SQL :
+-- 2.1 Sélectionnez le nom de famille de tous les employés.
+SELECT LastName
+FROM employees;
++-----------+
+| LastName  |
++-----------+
+| Rogers    |
+| Manikutty |
+| Smith     |
+| Stevens   |
+| Foster    |
+| ODonnell  |
+| Doe       |
+| Smith     |
+| Efron     |
+| Goldsmith |
+| Doe       |
+| Swamy     |
++-----------+
+-- 2.2 Sélectionnez le nom de famille de tous les employés, sans doublons.
+SELECT DISTINCT LastName
+FROM employees;
++-----------+
+| LastName  |
++-----------+
+| Rogers    |
+| Manikutty |
+| Smith     |
+| Stevens   |
+| Foster    |
+| ODonnell  |
+| Doe       |
+| Efron     |
+| Goldsmith |
+| Swamy     |
++-----------+
+-- 2.3 Sélectionnez toutes les données des employés dont le nom de famille est "Smith".
+SELECT *
+FROM employees
+WHERE LastName="Smith";
++-----------+-------+----------+------------+
+| SSN       | Name  | LastName | Department |
++-----------+-------+----------+------------+
+| 222364883 | Carol | Smith    |         37 |
+| 631231482 | David | Smith    |         77 |
++-----------+-------+----------+------------+
+2 rows in set (0.00 sec)
+-- 2.4 Sélectionnez toutes les données des employés dont le nom de famille est "Smith" ou "Doe".
+SELECT *
+FROM employees
+WHERE LastName="Smith" OR LastName="Doe";
++-----------+-----------+----------+------------+
+| SSN       | Name      | LastName | Department |
++-----------+-----------+----------+------------+
+| 222364883 | Carol     | Smith    |         37 |
+| 546523478 | John      | Doe      |         59 |
+| 631231482 | David     | Smith    |         77 |
+| 845657245 | Elizabeth | Doe      |         14 |
++-----------+-----------+----------+------------+
+4 rows in set (0.00 sec)
+-- 2.5 Sélectionnez toutes les données des employés qui travaillent dans le département 14.
+SELECT *
+FROM employees
+WHERE Department=14;
+-- 2.6 Sélectionner toutes les données des employés qui travaillent dans le département 37 ou le département 77.
++-----------+-----------+-----------+------------+
+| SSN       | Name      | LastName  | Department |
++-----------+-----------+-----------+------------+
+| 123234877 | Michael   | Rogers    |         14 |
+| 152934485 | Anand     | Manikutty |         14 |
+| 332154719 | Mary-Anne | Foster    |         14 |
+| 845657245 | Elizabeth | Doe       |         14 |
+| 845657246 | Kumar     | Swamy     |         14 |
++-----------+-----------+-----------+------------+
+-- 2.7 Sélectionner toutes les données des employés dont le nom de famille commence par un "S".
+SELECT *
+FROM employees
+WHERE LastName LIKE "S%";
++-----------+-------+----------+------------+
+| SSN       | Name  | LastName | Department |
++-----------+-------+----------+------------+
+| 222364883 | Carol | Smith    |         37 |
+| 326587417 | Joe   | Stevens  |         37 |
+| 631231482 | David | Smith    |         77 |
+| 845657246 | Kumar | Swamy    |         14 |
++-----------+-------+----------+------------+
+-- 2.8 Sélectionner la somme des budgets de tous les départements.
+ mysql> SELECT SUM(Budget)
+    -> FROM Departments;
++-------------+
+| SUM(Budget) |
++-------------+
+|      375000 |
++-------------+
+-- 2.9 Sélectionnez le nombre d'employés dans chaque département (vous devez seulement indiquer le code du département et le nombre d'employés).
+SELECT Department,COUNT(Name)
+FROM employees
+GROUP BY 1;
++------------+-------------+
+| Department | COUNT(Name) |
++------------+-------------+
+|         14 |           5 |
+|         37 |           2 |
+|         59 |           3 |
+|         77 |           2 |
++------------+-------------+
+-- 2.10 Sélectionnez toutes les données des employés, y compris les données du département de chaque employé.
+SELECT *
+FROM employees AS e
+LEFT JOIN departments AS d
+ON e.Department = d.code;
++-----------+-----------+-----------+------------+------+-----------------+--------+
+| SSN       | Name      | LastName  | Department | Code | Name            | Budget |
++-----------+-----------+-----------+------------+------+-----------------+--------+
+| 123234877 | Michael   | Rogers    |         14 |   14 | IT              |  65000 |
+| 152934485 | Anand     | Manikutty |         14 |   14 | IT              |  65000 |
+| 222364883 | Carol     | Smith     |         37 |   37 | Accounting      |  15000 |
+| 326587417 | Joe       | Stevens   |         37 |   37 | Accounting      |  15000 |
+| 332154719 | Mary-Anne | Foster    |         14 |   14 | IT              |  65000 |
+| 332569843 | George    | ODonnell  |         77 |   77 | Research        |  55000 |
+| 546523478 | John      | Doe       |         59 |   59 | Human Resources | 240000 |
+| 631231482 | David     | Smith     |         77 |   77 | Research        |  55000 |
+| 654873219 | Zacary    | Efron     |         59 |   59 | Human Resources | 240000 |
+| 745685214 | Eric      | Goldsmith |         59 |   59 | Human Resources | 240000 |
+| 845657245 | Elizabeth | Doe       |         14 |   14 | IT              |  65000 |
+| 845657246 | Kumar     | Swamy     |         14 |   14 | IT              |  65000 |
++-----------+-----------+-----------+------------+------+-----------------+--------+
+-- 2.11 Sélectionnez le nom et le prénom de chaque employé, ainsi que le nom et le budget du département de l'employé.
+SELECT e.Name,e.LastName,d.Name as Department,d.Budget
+FROM employees AS e
+LEFT JOIN departments AS d
+ON e.Department = d.code;
++-----------+-----------+-----------------+--------+
+| Name      | LastName  | Department      | Budget |
++-----------+-----------+-----------------+--------+
+| Michael   | Rogers    | IT              |  65000 |
+| Anand     | Manikutty | IT              |  65000 |
+| Carol     | Smith     | Accounting      |  15000 |
+| Joe       | Stevens   | Accounting      |  15000 |
+| Mary-Anne | Foster    | IT              |  65000 |
+| George    | ODonnell  | Research        |  55000 |
+| John      | Doe       | Human Resources | 240000 |
+| David     | Smith     | Research        |  55000 |
+| Zacary    | Efron     | Human Resources | 240000 |
+| Eric      | Goldsmith | Human Resources | 240000 |
+| Elizabeth | Doe       | IT              |  65000 |
+| Kumar     | Swamy     | IT              |  65000 |
++-----------+-----------+-----------------+--------+
+-- 2.12 Sélectionnez le nom et le nom de famille des employés travaillant pour des ministères dont le budget est supérieur à 60 000 $.
+SELECT e.LastName,d.Name as Department
+FROM employees AS e
+LEFT JOIN departments AS d
+ON e.Department = d.code
+WHERE d.Budget > 60000;
++-----------+-----------------+
+| LastName  | Department      |
++-----------+-----------------+
+| Rogers    | IT              |
+| Manikutty | IT              |
+| Foster    | IT              |
+| Doe       | IT              |
+| Swamy     | IT              |
+| Doe       | Human Resources |
+| Efron     | Human Resources |
+| Goldsmith | Human Resources |
++-----------+-----------------+
+
+-- 2.13 Sélectionnez les départements dont le budget est supérieur au budget moyen de l'ensemble des départements.
+WITH temporaryTable(avg) as (SELECT AVG(Budget) FROM Departments)
+SELECT *
+FROM Departments as d, temporaryTable as t
+WHERE d.Budget > t.avg;
+
++------+-----------------+--------+------------+
+| Code | Name            | Budget | avg        |
++------+-----------------+--------+------------+
+|   59 | Human Resources | 240000 | 93750.0000 |
++------+-----------------+--------+------------+
+
+
+-- 2.14 Sélectionnez les noms des départements ayant plus de deux employés.
+WITH temporaryTable as (
+SELECT COUNT(e.Name) as Number_Employee,d.Name as Department
+FROM employees as e
+LEFT JOIN departments AS d
+ON e.Department = d.code
+GROUP BY 2)
+SELECT *
+FROM temporaryTable as t
+WHERE t.Number_Employee>2;
++-----------------+-----------------+
+| Number_Employee | Department      |
++-----------------+-----------------+
+|               5 | IT              |
+|               3 | Human Resources |
++-----------------+-----------------+
+2 rows in set (0.00 sec)
+-- 2.15 Très important - Sélectionnez le nom et le nom de famille des employés travaillant pour les ministères dont le budget est le deuxième plus bas.
+WITH A AS (SELECT MIN(Budget) AS minimum
+FROM Departments), B AS (SELECT e.Name as Name,e.LastName AS LastName,d.Budget as Budget
+FROM employees as e
+LEFT JOIN departments AS d
+ON e.Department = d.code)
+SELECT B.Name,B.LastName,B.Budget 
+FROM A,B
+WHERE B.Budget>A.minimum
+ORDER BY 3
+LIMIT 1; 
++--------+----------+--------+
+| Name   | LastName | Budget |
++--------+----------+--------+
+| George | ODonnell |  55000 |
++--------+----------+--------+
+1 row in set (0.00 sec)
+
+
+-- 2.16 Ajoutez un nouveau service appelé "Quality assurance", avec un budget de 40 000 $ et le code de service 11. Et ajoutez un employé appelé "Mary Moore" dans ce département, avec le code SSN 847-21-9811.
+INSERT INTO departments (Name,Budget,Code) VALUES ( "Quality Assurance", 40000,11)
+INSERT INTO employees(SSN,Name,LastName,Department) VALUES ('847219811', "Mary", "Moore","Quality Assurance")
+
+-- 2.17 Réduire le budget de tous les départements de 10 %.
+SELECT Name, Budget AS Old_Budget, Budget * 0.9 AS NEW_BUDGET
+FROM departments;
++-------------------+------------+------------+
+| Name              | Old_Budget | NEW_BUDGET |
++-------------------+------------+------------+
+| Quality Assurance |      40000 |    36000.0 |
+| IT                |      65000 |    58500.0 |
+| Accounting        |      15000 |    13500.0 |
+| Human Resources   |     240000 |   216000.0 |
+| Research          |      55000 |    49500.0 |
++-------------------+------------+------------+
+-- 2.18 Réaffecter tous les employés du département de la recherche (code 77) au département informatique (code 14).
+UPDATE employees
+SET department=14
+WHERE department = 77;
+
+-- 2.19 Supprimer du tableau tous les employés du département informatique (code 14).
+DELETE FROM employees 
+WHERE department=14;
+-- 2.20 Supprimer du tableau tous les employés qui travaillent dans des départements dont le budget est supérieur ou égal à 60 000 $.
+1.FIRST DEFINE EMPLOYEES WHO ARE IN Dept with budget over 60000
+2.DELETE entries
+
+USE Company;
+DELETE FROM employees 
+WHERE
+    EXISTS( SELECT 
+        *
+    FROM
+        departments
+    
+    WHERE
+        employees.Department = departments.Code
+        AND departments.Budget > 60000);
+
+-- 2.21 Supprimer du tableau tous les employés.
+TRUNCATE TABLE employees;

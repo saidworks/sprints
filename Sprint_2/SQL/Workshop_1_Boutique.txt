@@ -152,37 +152,38 @@ mysql> SELECT *
 +------+-----------------+-------+--------------+
 3 rows in set (0.00 sec)
 7/ Sélectionnez le nom et le prix en cents (c'est-à-dire que le prix doit être multiplié par 100).
+Prix Multiple de 100
+mysql> SELECT *
+    -> FROM Products
+    -> WHERE Price / 100 >= 1;
++------+------------+-------+--------------+
+| Code | Name       | Price | Manufacturer |
++------+------------+-------+--------------+
+|    1 | Hard drive |   240 |            5 |
+|    2 | Memory     |   120 |            6 |
+|    3 | ZIP drive  |   150 |            4 |
+|    5 | Monitor    |   240 |            1 |
+|    6 | DVD drive  |   180 |            2 |
+|    8 | Printer    |   270 |            3 |
+|   10 | DVD burner |   180 |            2 |
++------+------------+-------+--------------+
+
+Prix multiplié par 100:
+mysql> SELECT *, Price*100 AS New_Price
+    -> FROM Products;
 
 8/ Calculer le prix moyen de tous les produits.
-mysql> SELECT *
-    -> FROM Products
-    -> WHERE Price / 100 >= 1;
-+------+------------+-------+--------------+
-| Code | Name       | Price | Manufacturer |
-+------+------------+-------+--------------+
-|    1 | Hard drive |   240 |            5 |
-|    2 | Memory     |   120 |            6 |
-|    3 | ZIP drive  |   150 |            4 |
-|    5 | Monitor    |   240 |            1 |
-|    6 | DVD drive  |   180 |            2 |
-|    8 | Printer    |   270 |            3 |
-|   10 | DVD burner |   180 |            2 |
-+------+------------+-------+--------------+
+
+SELECT AVG(Price) FROM Products;
+
+146.4545	
+
 9/ Calculer le prix moyen de tous les produits dont le code fabricant est égal à 2.
-mysql> SELECT *
-    -> FROM Products
-    -> WHERE Price / 100 >= 1;
-+------+------------+-------+--------------+
-| Code | Name       | Price | Manufacturer |
-+------+------------+-------+--------------+
-|    1 | Hard drive |   240 |            5 |
-|    2 | Memory     |   120 |            6 |
-|    3 | ZIP drive  |   150 |            4 |
-|    5 | Monitor    |   240 |            1 |
-|    6 | DVD drive  |   180 |            2 |
-|    8 | Printer    |   270 |            3 |
-|   10 | DVD burner |   180 |            2 |
-+------+------------+-------+--------------+
+SELECT AVG(Price) FROM Products WHERE Manufacturer=2;
+
+Result
+130.0000
+
 7 rows in set (0.00 sec)
 10/ Calculer le nombre de produits dont le prix est supérieur ou égal à 180 dollars.
 mysql> SELECT COUNT(*)
@@ -198,17 +199,14 @@ mysql> SELECT COUNT(*)
 mysql> SELECT Name,Price
     -> FROM Products
     -> WHERE Price >=180
-    -> ORDER BY Price DESC;
-+------------+-------+
-| Name       | Price |
-+------------+-------+
-| Printer    |   270 |
-| Hard drive |   240 |
-| Monitor    |   240 |
-| DVD drive  |   180 |
-| DVD burner |   180 |
-+------------+-------+
-5 rows in set (0.00 sec)
+    -> ORDER BY Price DESC, Name;
+Result
+'laser Print', '270'
+'Hard drive', '240'
+'Monitor', '240'
+'DVD burner', '180'
+'DVD drive', '180'
+
 
 12/ Sélectionnez toutes les données des produits, y compris toutes les données relatives au fabricant de chaque produit.
 mysql> SELECT *
