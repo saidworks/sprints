@@ -1,0 +1,92 @@
+En se basant sur le fichier sql shema et shema figure:
+-- vous devez créer une base données, et imiter les requêtes dans le fichier sql shema.
+Exprimer les requêtes suivantes en SQL :
+-- 6.1 Listez les noms de tous les scientifiques, les noms de leurs projets, 
+SELECT s.name,p.name
+FROM Scientists as s
+JOIN AssignedTo as a
+ON s.SSN=a.scientist
+JOIN Projects as p
+ON p.code= a.project;
++------------------+----------------------------------------------+
+| name             | name                                         |
++------------------+----------------------------------------------+
+| Michael Rogers   | Winds: Studying Bernoullis Principle         |
+| Anand Manikutty  | Aerodynamics and Gas Mileage                 |
+| Carol Smith      | Build Your Own Telescope                     |
+| Joe Stevens      | Build Your Own Telescope                     |
+| Mary-Anne Foster | Juicy: Extracting Apple Juice with Pectinase |
+| George ODonnell  | Aerodynamics and Ice Hockey                  |
+| John Doe         | A Silver-Cleaning Battery                    |
+| David Smith      | Build Your Own Telescope                     |
+| Zacary Efron     | A Silver-Cleaning Battery                    |
+| Eric Goldsmith   | Aerodynamics and Gas Mileage                 |
+| Elizabeth Doe    | A Matter of Time                             |
+| Kumar Swamy      | A Puzzling Parallax                          |
++------------------+----------------------------------------------+
+12 rows in set (0.00 sec)
+    -- et les heures travaillées par ce scientifique sur chaque projet, 
+SELECT s.name,p.name,p.hours
+FROM Scientists as s
+JOIN AssignedTo as a
+ON s.SSN=a.scientist
+JOIN Projects as p
+ON p.code= a.project;
++------------------+----------------------------------------------+-------+
+| name             | name                                         | hours |
++------------------+----------------------------------------------+-------+
+| Michael Rogers   | Winds: Studying Bernoullis Principle         |   156 |
+| Anand Manikutty  | Aerodynamics and Gas Mileage                 |   256 |
+| Carol Smith      | Build Your Own Telescope                     |  6546 |
+| Joe Stevens      | Build Your Own Telescope                     |  6546 |
+| Mary-Anne Foster | Juicy: Extracting Apple Juice with Pectinase |   321 |
+| George ODonnell  | Aerodynamics and Ice Hockey                  |   789 |
+| John Doe         | A Silver-Cleaning Battery                    |   545 |
+| David Smith      | Build Your Own Telescope                     |  6546 |
+| Zacary Efron     | A Silver-Cleaning Battery                    |   545 |
+| Eric Goldsmith   | Aerodynamics and Gas Mileage                 |   256 |
+| Elizabeth Doe    | A Matter of Time                             |   112 |
+| Kumar Swamy      | A Puzzling Parallax                          |   299 |
++------------------+----------------------------------------------+-------+
+    -- dans l'ordre alphabétique du nom du projet, puis du nom du scientifique.
+SELECT s.name,p.name,p.hours
+FROM Scientists as s
+JOIN AssignedTo as a
+ON s.SSN=a.scientist
+JOIN Projects as p
+ON p.code= a.project
+ORDER BY 2,1;
++------------------+----------------------------------------------+-------+
+| name             | name                                         | hours |
++------------------+----------------------------------------------+-------+
+| Elizabeth Doe    | A Matter of Time                             |   112 |
+| Kumar Swamy      | A Puzzling Parallax                          |   299 |
+| John Doe         | A Silver-Cleaning Battery                    |   545 |
+| Zacary Efron     | A Silver-Cleaning Battery                    |   545 |
+| Anand Manikutty  | Aerodynamics and Gas Mileage                 |   256 |
+| Eric Goldsmith   | Aerodynamics and Gas Mileage                 |   256 |
+| George ODonnell  | Aerodynamics and Ice Hockey                  |   789 |
+| Carol Smith      | Build Your Own Telescope                     |  6546 |
+| David Smith      | Build Your Own Telescope                     |  6546 |
+| Joe Stevens      | Build Your Own Telescope                     |  6546 |
+| Mary-Anne Foster | Juicy: Extracting Apple Juice with Pectinase |   321 |
+| Michael Rogers   | Winds: Studying Bernoullis Principle         |   156 |
++------------------+----------------------------------------------+-------+
+
+-- 6.2 Sélectionnez les noms de projets qui ne sont pas encore attribués
+SELECT *
+FROM projects as p
+LEFT JOIN AssignedTo as a
+ON p.code= a.project
+WHERE scientist is NULL;
++------+-------------------------------------+-------+-----------+---------+
+| Code | Name                                | Hours | Scientist | Project |
++------+-------------------------------------+-------+-----------+---------+
+| AeH2 | Aerodynamics and Bridge Design      |   189 |      NULL | NULL    |
+| AeH5 | Aerodynamics of a Football          |    98 |      NULL | NULL    |
+| AeH6 | Aerodynamics of Air Hockey          |    89 |      NULL | NULL    |
+| Bte2 | A Magnetic Primer Designer          |  9684 |      NULL | NULL    |
+| Bte3 | Bacterial Transformation Efficiency |   321 |      NULL | NULL    |
+| Che2 | A Soluble Separation Solution       |   778 |      NULL | NULL    |
++------+-------------------------------------+-------+-----------+---------+
+

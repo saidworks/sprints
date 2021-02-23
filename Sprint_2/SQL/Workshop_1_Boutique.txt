@@ -317,59 +317,24 @@ LIMIT 1;
 +-------------+--------------+
 1 row in set (0.00 sec)
 18/ Sélectionnez le nom de chaque fabricant ainsi que le nom et le prix de son produit le plus cher.
-SELECT m.Name, MAX(p.price)
+SELECT p.Name,m.Name,p.Price
 FROM Products as p
 LEFT JOIN Manufacturers as m
 ON p.Manufacturer = m.code
-GROUP BY 1
-ORDER BY 1 
-LIMIT 6;
-ORDER BY Price
-+-----------------+--------------+
-| Name            | MAX(p.price) |
-+-----------------+--------------+
-| Winchester      |          120 |
-| Iomega          |          150 |
-| Creative Labs   |          180 |
-| Fujitsu         |          240 |
-| Sony            |          240 |
-| Hewlett-Packard |          270 |
-+-----------------+--------------+
+WHERE p.Price IN ( SELECT Max(Price) FROM products as p,manufacturers as m WHERE p.Manufacturer=m.Code GROUP BY p.manufacturer); 
 
-ORDER BY name
-+-----------------+--------------+
-| Name            | MAX(p.price) |
-+-----------------+--------------+
-| Creative Labs   |          180 |
-| Fujitsu         |          240 |
-| Hewlett-Packard |          270 |
-| Iomega          |          150 |
-| Sony            |          240 |
-| Winchester      |          120 |
-+-----------------+--------------+
-19/ Ajouter un nouveau produit : Loudspeakers, 70 $, manufacter 2 
+
+19/ Ajouter un nouveau produit : Loudspeakers, 70 $, manufacturer 2 
 INSERT INTO Products(Code,Name, Price , Manufacturer) VALUES (11,"Loudspeakers",70,2);
 20/ Mettre à jour le nom du produit 8 en "laser Print".
 UPDATE Products 
 SET Name="laser Print"
 WHERE Code = 8;
 21/ Appliquer une remise de 10 % à tous les produits.
-SELECT Price as Old_Price, ,Price * 0.9 as New_price
-FROM Products;
+UPDATE Products 
+SET PRICE = PRICE * 0.9;
+
 22/ Appliquer une remise de 10 % à tous les produits dont le prix est supérieur ou égal à 120 $.
-SELECT Price as Old_Price,Price * 0.9 as New_price,(Price - 0.9*Price) as Discount
-FROM Products
-WHERE Price >= 120;
-+-----------+-----------+----------+
-| Old_Price | New_price | Discount |
-+-----------+-----------+----------+
-|       240 |     216.0 |     24.0 |
-|       120 |     108.0 |     12.0 |
-|       150 |     135.0 |     15.0 |
-|       240 |     216.0 |     24.0 |
-|       180 |     162.0 |     18.0 |
-|       270 |     243.0 |     27.0 |
-|       180 |     162.0 |     18.0 |
-+-----------+-----------+----------+
-
-
+UPDATE Products 
+SET PRICE = PRICE * 0.9
+WHERE PRICE >= 120;

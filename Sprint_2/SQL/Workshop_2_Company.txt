@@ -66,6 +66,9 @@ SELECT *
 FROM employees
 WHERE Department=14;
 -- 2.6 Sélectionner toutes les données des employés qui travaillent dans le département 37 ou le département 77.
+SELECT *
+FROM employees
+WHERE Department=37 OR Department=77;
 +-----------+-----------+-----------+------------+
 | SSN       | Name      | LastName  | Department |
 +-----------+-----------+-----------+------------+
@@ -95,6 +98,7 @@ WHERE LastName LIKE "S%";
 +-------------+
 |      375000 |
 +-------------+
+
 -- 2.9 Sélectionnez le nombre d'employés dans chaque département (vous devez seulement indiquer le code du département et le nombre d'employés).
 SELECT Department,COUNT(Name)
 FROM employees
@@ -107,6 +111,7 @@ GROUP BY 1;
 |         59 |           3 |
 |         77 |           2 |
 +------------+-------------+
+
 -- 2.10 Sélectionnez toutes les données des employés, y compris les données du département de chaque employé.
 SELECT *
 FROM employees AS e
@@ -174,6 +179,7 @@ SELECT *
 FROM Departments as d, temporaryTable as t
 WHERE d.Budget > t.avg;
 
+
 +------+-----------------+--------+------------+
 | Code | Name            | Budget | avg        |
 +------+-----------------+--------+------------+
@@ -198,6 +204,7 @@ WHERE t.Number_Employee>2;
 |               3 | Human Resources |
 +-----------------+-----------------+
 2 rows in set (0.00 sec)
+
 -- 2.15 Très important - Sélectionnez le nom et le nom de famille des employés travaillant pour les ministères dont le budget est le deuxième plus bas.
 WITH A AS (SELECT MIN(Budget) AS minimum
 FROM Departments), B AS (SELECT e.Name as Name,e.LastName AS LastName,d.Budget as Budget
@@ -208,13 +215,21 @@ SELECT B.Name,B.LastName,B.Budget
 FROM A,B
 WHERE B.Budget>A.minimum
 ORDER BY 3
-LIMIT 1; 
+LIMIT 2; 
 +--------+----------+--------+
 | Name   | LastName | Budget |
 +--------+----------+--------+
 | George | ODonnell |  55000 |
+| David  | Smith    |  55000 |
 +--------+----------+--------+
-1 row in set (0.00 sec)
+
+Autre solution plus concise: 
+SELECT x.Name, x.LastName
+FROM Employees x 
+WHERE x.Department = (
+       SELECT y.Code 
+       FROM (SELECT * FROM Departments d ORDER BY d.budget LIMIT 2) y 
+       ORDER BY budget DESC LIMIT 1)
 
 
 -- 2.16 Ajoutez un nouveau service appelé "Quality assurance", avec un budget de 40 000 $ et le code de service 11. Et ajoutez un employé appelé "Mary Moore" dans ce département, avec le code SSN 847-21-9811.
@@ -233,6 +248,9 @@ FROM departments;
 | Human Resources   |     240000 |   216000.0 |
 | Research          |      55000 |    49500.0 |
 +-------------------+------------+------------+
+UPDATE departments 
+SET Budget = 0.9*Budget;
+
 -- 2.18 Réaffecter tous les employés du département de la recherche (code 77) au département informatique (code 14).
 UPDATE employees
 SET department=14
