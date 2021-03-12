@@ -3,8 +3,12 @@ Designs for inspiration:
 https://webflow.com/blog/restaurant-website-design
 
 Pictures
+<<<<<<< HEAD
 https://pixabay.com/images/search/food/
 
 
 7-1 Pattern
 https://gist.github.com/rveitch/84cea9650092119527bc
+=======
+https://pixabay.com/images/search/food/
+>>>>>>> 9f06101ef41ab9238aa79a94dcdb4ebac0daf9ba
