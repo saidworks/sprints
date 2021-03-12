@@ -1,0 +1,10 @@
+Designs for inspiration: 
+
+https://webflow.com/blog/restaurant-website-design
+
+Pictures
+https://pixabay.com/images/search/food/
+
+
+7-1 Pattern
+https://gist.github.com/rveitch/84cea9650092119527bc
