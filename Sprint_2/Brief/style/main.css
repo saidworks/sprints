@@ -51,9 +51,9 @@ table {
 
 :root {
   font-size: 10px;
-  --font-small: 1rem;
-  --font-medium: 2rem;
-  --font-big: 3rem;
+  --font-small: 3vw;
+  --font-medium: 6vw;
+  --font-big: 9vw;
   --h1: 5rem;
   --font-color:#7e1d11;
   --main-color:#727272; }
@@ -71,17 +71,41 @@ body {
   .navbar__logo img {
     width: 20vw; }
 
-.main .main__sidebar {
+.main__sidebar {
   position: absolute;
   text-align: center;
   margin-top: -6vh;
   margin-left: 35vw;
   max-width: 100vw; }
-  .main .main__sidebar .sidebar-collection {
+  .main__sidebar .sidebar-collection {
     display: flex;
     width: 40vw;
     justify-content: space-between;
     align-items: center; }
+
+.main__products {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; }
+  .main__products .products-panel {
+    flex: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+  .main__products .products-panel:nth-child(1) {
+    background-image: url(../../images/1.jpg); }
+  .main__products .products-panel:nth-child(2) {
+    background-image: url(../../images/2.jpg); }
+  .main__products .products-panel:nth-child(3) {
+    background-image: url(../../images/3.jpg); }
+  .main__products .products-panel:nth-child(4) {
+    background-image: url(../../images/4.jpg); }
+  .main__products .products-panel:nth-child(5) {
+    background-image: url(../../images/5.jpg); }
+
+.footer {
+  display: flex;
+  font-size: var(--font-medium); }
 
 .navbar__adbar {
   background-image: url(../../images/food-366875_1280.jpg);
