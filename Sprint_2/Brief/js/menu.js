@@ -14,8 +14,8 @@ function backToNormal(){
 
 panels.forEach(
     function(panel){
-        panel.addEventListener('click',stretch);
-        panel.addEventListener('click',stretch);
+        panel.addEventListener('mouseenter',stretch);
+        panel.addEventListener('mouseenter',stretch);
     }
 )
 panels.forEach(
