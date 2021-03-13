@@ -1,0 +1,30 @@
+body {
+    max-width: 100vw;
+    
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100vw;
+    &__logo{
+        img{
+        width: 20vw;}
+    }
+
+}
+
+.main {
+    .main__sidebar{
+        position: absolute;
+        text-align: center;
+        margin-top: -8.5vh;
+        margin-left: 40vw;
+        max-width: max-content;
+        .li{
+            display: inline;
+            flex-direction: row;
+        }
+    }
+}

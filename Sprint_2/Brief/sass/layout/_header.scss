@@ -1,0 +1,36 @@
+
+
+.navbar{
+    &__adbar{
+background-image: url(../../images/food-366875_1280.jpg);
+background-position:bottom;
+background-size: cover;
+font-size: var(--font-big);
+display: none;
+visibility: hidden;
+    }
+  
+
+
+
+@media (min-width:768px) {
+
+display: block;
+    .navbar{
+        max-width: 100vw;
+    &__adbar{
+        height: auto;
+display: block;
+visibility: visible;
+background-position:bottom;
+background-size: cover;
+    }
+    &__logo{
+        img{
+        width: 20vw;}
+    }
+}
+
+}
+}
+
