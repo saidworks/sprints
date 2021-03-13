@@ -63,11 +63,25 @@ body {
             background-image: url(../../images/5.jpg);
 
     }
+    .products-panel>*{
+        transform: translateX(-100vw);
+    }
+    .appear{
+        transform: translateX(0%);
+    }
+    .stretch{
+        flex:5;
+    }
 
 }
 }
 
 .footer{
-    display: flex;
+    background-color: var(--font-color);
+    color: var(--main-color);
+    font-weight: 700;
     font-size: var(--font-medium);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

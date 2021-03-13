@@ -102,10 +102,21 @@ body {
     background-image: url(../../images/4.jpg); }
   .main__products .products-panel:nth-child(5) {
     background-image: url(../../images/5.jpg); }
+  .main__products .products-panel > * {
+    transform: translateX(-100vw); }
+  .main__products .appear {
+    transform: translateX(0%); }
+  .main__products .stretch {
+    flex: 5; }
 
 .footer {
+  background-color: var(--font-color);
+  color: var(--main-color);
+  font-weight: 700;
+  font-size: var(--font-medium);
   display: flex;
-  font-size: var(--font-medium); }
+  justify-content: space-between;
+  align-items: center; }
 
 .navbar__adbar {
   background-image: url(../../images/food-366875_1280.jpg);
