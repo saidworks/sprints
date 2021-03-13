@@ -54,46 +54,57 @@ table {
   --font-small: 1rem;
   --font-medium: 2rem;
   --font-big: 3rem;
-  --h1: 5rem; }
+  --h1: 5rem;
+  --font-color:#7e1d11;
+  --main-color:#727272; }
 
 body {
-  max-width: 100vw; }
+  max-width: 100vw;
+  background-color: var(--main-color);
+  color: var(--font-color); }
 
 .navbar {
   display: flex;
   justify-content: space-between;
-  max-width: 100vw; }
+  align-items: center;
+  max-width: 98vw; }
   .navbar__logo img {
     width: 20vw; }
 
 .main .main__sidebar {
   position: absolute;
   text-align: center;
-  margin-top: -8.5vh;
-  margin-left: 40vw;
-  max-width: max-content; }
-  .main .main__sidebar .li {
-    display: inline;
-    flex-direction: row; }
+  margin-top: -6vh;
+  margin-left: 35vw;
+  max-width: 100vw; }
+  .main .main__sidebar .sidebar-collection {
+    display: flex;
+    width: 40vw;
+    justify-content: space-between;
+    align-items: center; }
 
 .navbar__adbar {
   background-image: url(../../images/food-366875_1280.jpg);
   background-position: bottom;
   background-size: cover;
-  font-size: var(--font-big);
+  font-size: var(--font-medium);
   display: none;
   visibility: hidden; }
 
+.navbar .btn {
+  background-color: var(--font-color);
+  color: var(--main-color);
+  padding: 2vw 4vw;
+  border-radius: 15%; }
+
 @media (min-width: 768px) {
   .navbar {
-    display: block; }
-    .navbar .navbar {
-      max-width: 100vw; }
-      .navbar .navbar__adbar {
-        height: auto;
-        display: block;
-        visibility: visible;
-        background-position: bottom;
-        background-size: cover; }
-      .navbar .navbar__logo img {
-        width: 20vw; } }
+    max-width: 100vw; }
+    .navbar__adbar {
+      height: auto;
+      display: block;
+      visibility: visible;
+      background-position: bottom;
+      background-size: cover; }
+    .navbar__logo img {
+      width: 20vw; } }

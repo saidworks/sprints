@@ -1,17 +1,20 @@
 body {
     max-width: 100vw;
-    
+    background-color: var(--main-color);
+    color:var(--font-color)
 
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
-    max-width: 100vw;
+    align-items: center;
+    max-width: 98vw;
     &__logo{
         img{
         width: 20vw;}
     }
+    
 
 }
 
@@ -19,12 +22,15 @@ body {
     .main__sidebar{
         position: absolute;
         text-align: center;
-        margin-top: -8.5vh;
-        margin-left: 40vw;
-        max-width: max-content;
-        .li{
-            display: inline;
-            flex-direction: row;
+        margin-top: -6vh;
+        margin-left: 35vw;
+        max-width: 100vw;
+        .sidebar-collection{
+            display: flex;
+            width: 40vw;
+            justify-content: space-between;
+            align-items: center;
+            
         }
     }
 }
