@@ -1,0 +1,27 @@
+
+.main {
+    &__about{ 
+    form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: var(--font-medium);
+    .btn{
+        background-color: var(--font-color);
+        color:var(--main-color);
+        border-radius: 15rem;
+        font-size: var(--font-small);
+    
+    }
+    input[type='text']{
+        width:15%;
+        height: var(--font-medium);
+    }
+    input[type='email']{
+        width:15%;
+        height: var(--font-medium);
+    }
+    }
+    }
+
+}

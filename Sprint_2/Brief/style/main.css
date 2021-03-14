@@ -58,18 +58,55 @@ table {
   --font-color:#7e1d11;
   --main-color:#727272; }
 
+.footer {
+  background-color: var(--font-color);
+  color: var(--main-color);
+  font-weight: 700;
+  font-size: var(--font-small);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw; }
+  .footer img {
+    width: 50%; }
+  @media screen and (min-width: 768px) {
+    .footer {
+      width: 100%;
+      position: absolute;
+      padding: 1% 0%;
+      bottom: 0%;
+      background-color: var(--font-color);
+      color: var(--main-color);
+      font-weight: 700;
+      font-size: var(--font-small);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center; }
+      .footer img {
+        width: 50%; } }
+
+.main__about form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: var(--font-medium); }
+  .main__about form .btn {
+    background-color: var(--font-color);
+    color: var(--main-color);
+    border-radius: 15rem;
+    font-size: var(--font-small); }
+  .main__about form input[type='text'] {
+    width: 15%;
+    height: var(--font-medium); }
+  .main__about form input[type='email'] {
+    width: 15%;
+    height: var(--font-medium); }
+
 body {
   max-width: 100%;
   background-color: var(--main-color);
   color: var(--font-color); }
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 98vw; }
-  .navbar__logo img {
-    width: 20vw; }
 
 .main__title {
   font-size: var(--h1);
@@ -125,47 +162,19 @@ body {
     opacity: 1;
     transform: translateY(-30%); }
 
-.footer {
-  background-color: var(--font-color);
-  color: var(--main-color);
-  font-weight: 700;
-  font-size: var(--font-small);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw; }
-  .footer img {
-    width: 50%; }
-
 @media (min-width: 768px) {
   body {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(5, 1fr) 0.25fr; }
-  .navbar {
-    grid-column: 1/7;
-    grid-row: 1/2;
-    display: flex;
-    max-width: 100vw; }
-    .navbar__logo img {
-      width: 50%; }
-  #desktop {
-    font-size: var(--font-medium);
-    display: block;
-    height: 15rem;
-    visibility: visible;
-    background-position: bottom;
-    background-size: cover;
-    text-align: center;
-    padding: 1%; }
+    grid-template-rows: repeat(5, 1fr); }
   .main {
     width: 100%;
     grid-column: 2/7;
     grid-row: 2/6;
     margin: 0% 5% 0% 0%; }
     .main__sidebar {
-      left: -25%;
-      top: 60%; }
+      left: -28%;
+      top: 40%; }
       .main__sidebar .sidebar-collection {
         font-size: var(--font-small);
         display: flex;
@@ -179,36 +188,43 @@ body {
       grid-row: 1/6;
       height: 100%; }
       .main__products .products-panel {
-        width: 80%; }
-  .footer {
-    width: 100%;
-    grid-column: 1/7;
-    grid-row: 6/7;
+        width: 80%; } }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 98vw; }
+  .navbar__logo img {
+    width: 20vw; }
+  .navbar__adbar {
+    background-image: url(../../images/food-366875_1280.jpg);
+    background-position: bottom;
+    background-size: cover;
+    font-size: var(--font-medium);
+    display: none;
+    visibility: hidden;
+    border-radius: 2rem;
+    width: 50%; }
+  .navbar .btn {
     background-color: var(--font-color);
     color: var(--main-color);
-    font-weight: 700;
-    font-size: var(--font-small);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    z-index: 1; }
-    .footer img {
-      width: 50%; } }
-
-.navbar__adbar {
-  background-image: url(../../images/food-366875_1280.jpg);
-  background-position: bottom;
-  background-size: cover;
-  font-size: var(--font-medium);
-  display: none;
-  visibility: hidden;
-  border-radius: 2rem;
-  width: 50%; }
-
-.navbar .btn {
-  background-color: var(--font-color);
-  color: var(--main-color);
-  padding: 2vw 6vw;
-  border-radius: 15rem;
-  font-size: var(--font-small); }
+    padding: 2vw 6vw;
+    border-radius: 15rem;
+    font-size: var(--font-small); }
+  @media screen and (min-width: 768px) {
+    .navbar {
+      grid-column: 1/7;
+      grid-row: 1/2;
+      display: flex;
+      max-width: 100vw; }
+      .navbar #desktop {
+        font-size: var(--font-medium);
+        display: block;
+        height: 10rem;
+        visibility: visible;
+        background-position: bottom;
+        background-size: cover;
+        text-align: center; }
+      .navbar__logo img {
+        width: 50%; } }
