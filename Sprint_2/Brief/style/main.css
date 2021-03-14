@@ -143,16 +143,16 @@ body {
     margin: 2%;
     opacity: 30%; }
   .main__products .products-panel:nth-child(1) {
-    background-image: url(../../images/1.jpg);
+    background-image: url(../images/1.jpg);
     font-size: var(--font-big); }
   .main__products .products-panel:nth-child(2) {
-    background-image: url(../../images/2.jpg); }
+    background-image: url(../images/2.jpg); }
   .main__products .products-panel:nth-child(3) {
-    background-image: url(../../images/3.jpg); }
+    background-image: url(../images/3.jpg); }
   .main__products .products-panel:nth-child(4) {
-    background-image: url(../../images/4.jpg); }
+    background-image: url(../images/4.jpg); }
   .main__products .products-panel:nth-child(5) {
-    background-image: url(../../images/5.jpg); }
+    background-image: url(../images/5.jpg); }
   .main__products .products-panel > * {
     transform: translateX(-100%); }
   .main__products .appear {
@@ -198,7 +198,7 @@ body {
   .navbar__logo img {
     width: 20vw; }
   .navbar__adbar {
-    background-image: url(../../images/food-366875_1280.jpg);
+    background-image: url(../images/food-366875_1280.jpg);
     background-position: bottom;
     background-size: cover;
     font-size: var(--font-medium);
