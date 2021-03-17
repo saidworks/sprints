@@ -1,20 +1,13 @@
 <?php 
-// //create admin
-//  $dsn = "mysql:host=localhost;dbname=restaurant";
-//  $username = "root";
-//  $password = "mysql";
-//  $pdo = new PDO($dsn,$username,$password);
-//  $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-//  // insert into table contactus
-//  $sql = "INSERT INTO users (firstname,lastname,email,password) VALUES(:firstname,:lastname,:email,:password)";
-// //  $sql = "INSERT INTO contactus (name,email,message) VALUES('" . $name . "','" . $email . "','" . $message . "')";
-//  // $pdo->query($sql);
-//  $stmt = $pdo->prepare($sql);
-//  $values = array(array(':firstname',"Said"),array(':lastname',"ZITOUNI"),array(':email',"zitouni.sd@gmail.com"),array(':password',password_hash("restauranto",PASSWORD_DEFAULT)));
-//  foreach($values as $value){
-//          $stmt->bindValue($value[0],$value[1]);
-//  }
-//  $stmt->execute(); 
+require_once "config.php";
+ // create admin
+//  $sql = "INSERT INTO admin (username,password,email,firstname,lastname) VALUES(:username,:password,:email,:firstname,:lastname)";
+//  $values = array(array(':username',"admin"),array(':firstname',"Said"),array(':lastname',"ZITOUNI"),array(':email',"zitouni.sd@gmail.com"),array(':password',password_hash("restauranto",PASSWORD_DEFAULT)));
+//  queryDB($sql,$values);
+//insert products
+// $sql = "INSERT INTO products (name,price,adminId) VALUES(:name,:price,:adminId)";
+// $values = array(array(':name',"lentils"),array(':price',10),array(':adminId',1));
+// queryDB($sql,$values);
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,23 +44,17 @@
         <input type="submit" name="submit">
         </form>
         <?php
-            $dsn = "mysql:host=localhost;dbname=restaurant";
-            $username = "root";
-            $pass = "mysql";
-            $pdo = new PDO($dsn,$username,$pass);
-            $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+        require_once "config.php";
            
             if(isset($_POST['username']) and isset($_POST['password'])){
                 $name = $_POST['username'];
                 $password = $_POST['password'];
                 // query
-            $sql = "SELECT * FROM users WHERE email=:username";  
-            $stmt = $pdo->prepare($sql);
-            $value = array(':username',$name);
-            $stmt->bindValue($value[0],$value[1]);
-            $stmt->execute();
-            $result = $stmt->fetch(PDO::FETCH_ASSOC);
-            $result;
+            $sql = "SELECT * FROM users WHERE email=:username"; 
+            $values = array(':username',$name);
+
+            $result=queryDB($sql,$values,1);
+
             if(password_verify($password,$result['password'])){
                     echo "Welcome ".$result["firstname"];
                     //redirect using javascript

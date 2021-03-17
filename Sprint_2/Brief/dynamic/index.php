@@ -13,7 +13,7 @@
     <div class="navbar">
         <div class="navbar__logo"><img src="images/logo@2x.png" alt="logo"></div>
         <div id="desktop" class="navbar__adbar">The Food you love at a price you can afford!</div>
-        <div class="navbar__login"><input class="btn" type="button" value="login" name="Login"></div>
+        <a href="./php/login.php"> <div class="navbar__login"><input class="btn" type="button" value="login" name="Login"></div></a>
     </div>
     <div class="main">
         <div class="main__title"> Our Menu </div>

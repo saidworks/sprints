@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +16,7 @@
         <div class="navbar__login"><input class="btn" type="button" value="login" name="Login"></div>
     </div>
     <div class="main">
-        <div class="main__title"> Contact US</div>
+        <div class="main__title"> Add Products </div>
         <div class="main__sidebar">
             <ul class="sidebar-collection">
                 <li class="collection-item"><a href="../index.php"> Home</a></li>
@@ -26,26 +25,36 @@
             </ul>
         </div>
         <div class="main__about">
+        <form action="" method="POST">
+        <label for="name">Product Name</label>
+        <input type="text" name="name">
+        <label for="price">Price</label>
+        <input type="text" name="price">
+        <input class="btn" type="submit" name="submit" value="Add">
+        </form>
         <?php
-            if(isset($_POST['name']) and isset($_POST['email']) and isset($_POST['message'])){
+        /* 
+        //-add block to avoid duplicates 
+          -for file upload : 
+            1. Add column to the table for image path storing
+            2. Add upload to the form 
+            3. Add superglobal scripts for uploading image
+            4. Add image link to the value binding method
+        */
+        require_once "config.php";
+        $adminId=1;   
+            if(isset($_POST['name']) and isset($_POST['price'])){
                 $name = $_POST['name'];
-                $email = $_POST['email'];
-                $message = $_POST['message'];
-            }
-            else {
-                echo "Please fill all required fields!";
-            }
-            // another way of doing this  
-            // extract($_POST);
-            require_once "config.php";
-            // insert into table contactus
-            // $sql = "INSERT INTO contactus (name,email,message) VALUES('$name','$email','$message')";
-            $sql = "INSERT INTO contactus (name,email,message) VALUES('" . $name . "','" . $email . "','" . $message . "')";
-            // $pdo->query($sql);
-            $values = array(array(':name',$name),array(':email',$email),array(':message',$email));
+                $price = $_POST['price'];}
+                // query
+            $sql = "INSERT IGNORE INTO products (adminId,name,price) VALUES(:adminId,:name,:price)"; 
+           
+            $values = array(array(':adminId',$adminId),array(':name',$name),array(':price',$price));
+
             queryDB($sql,$values);
-            echo "<p> your message was sent Mr/Mrs $name, we will contact you soon";
         ?>
+
+        
         </div>
     </div>
     <div class="footer">
@@ -56,7 +65,5 @@
         <div class="footer__instagram"><img src="../images/198px-Instagram_logo_2016.svg.png" alt=""></div>
 
     </div>
-<script src="./js/menu.js"></script>
 </body>
-
 </html>

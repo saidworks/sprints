@@ -105,6 +105,13 @@ table {
     width: 15%;
     height: var(--font-medium); }
 
+.main__about .dash {
+  border: 1px solid black;
+  padding: 1%; }
+
+.main__about .dash {
+  width: 100%; }
+
 body {
   max-width: 100%;
   background-color: var(--main-color);
