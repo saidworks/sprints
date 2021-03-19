@@ -151,17 +151,26 @@ body {
     width: 95vw;
     margin: 2%;
     opacity: 30%; }
-  <? for($i=1;$i<6;$i++){
+  <?
+    require_once "../php/config.php";
+    $sql = "SELECT * FROM products";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->fetchall(PDO::FETCH_ASSOC); 
+    //use the result array to change background
+    $i = 1;
+    foreach($result as $value){
     echo "  .main__products .products-panel:nth-child($i) {
-      background-image: url(../images/".$i.".jpg);
+      background-image: url(../php/".$value['image'].");
       font-size: var(--font-big); }";
+      $i++;
   } ?>
 
   
   .main__products .products-panel > * {
-    transform: translateX(-100%); }
+    transform: translateX(0%); }
   .main__products .appear {
-    transform: translateY(20%); }
+    transform: translateY(50%); }
   .main__products .stretch {
     flex: 100%;
     opacity: 1;

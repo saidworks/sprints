@@ -45,22 +45,20 @@
             </ul>
         </div>
         <div class="main__products">
+            <?
+                require_once "./php/config.php";
+                $sql = "SELECT * FROM products";
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute();
+                $result = $stmt->fetchall(PDO::FETCH_ASSOC); ?> 
+              
+              <?  foreach($result as $value) : ?>
+            
         
         <div class="products-panel" id="desktop-products">
-            <p class="description">Chicken</p>
+            <p class="description"><?= $value['name'];?></p>
         </div>
-        <div class="products-panel" id="desktop-products">
-            <p class="description">Burger</p>
-        </div>
-        <div class="products-panel" id="desktop-products">
-            <p class="description">Pizza</p>
-        </div>
-        <div class="products-panel" id="desktop-products">
-            <p class="description">Salad</p>
-        </div>
-        <div class="products-panel" id="desktop-products">
-            <p class="description">Pasta</p>
-        </div>
+        <? endforeach; ?>
     </div>
     </div>
     <div class="footer">
