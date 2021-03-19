@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,34 +26,17 @@
             </ul>
         </div>
         <div class="main__about">
-        <form action="" method="POST">
+        <form action="upload.php" method="POST" enctype="multipart/form-data">
         <label for="name">Product Name</label>
         <input type="text" name="name">
         <label for="price">Price</label>
         <input type="text" name="price">
+        <input type="hidden" name="MAX_FILE_SIZE" value="30000000">
+        <input type="file" name="upload" value="">
         <input class="btn" type="submit" name="submit" value="Add">
         </form>
-        <?php
-        /* 
-        //-add block to avoid duplicates 
-          -for file upload : 
-            1. Add column to the table for image path storing
-            2. Add upload to the form 
-            3. Add superglobal scripts for uploading image
-            4. Add image link to the value binding method
-        */
-        require_once "config.php";
-        $adminId=1;   
-            if(isset($_POST['name']) and isset($_POST['price'])){
-                $name = $_POST['name'];
-                $price = $_POST['price'];}
-                // query
-            $sql = "INSERT IGNORE INTO products (adminId,name,price) VALUES(:adminId,:name,:price)"; 
-           
-            $values = array(array(':adminId',$adminId),array(':name',$name),array(':price',$price));
+       
 
-            queryDB($sql,$values);
-        ?>
 
         
         </div>

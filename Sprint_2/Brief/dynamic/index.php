@@ -25,6 +25,7 @@
             </ul>
         </div>
         <div class="main__products">
+        
             <div class="products-panel" id="desktop-products">
                 <p class="description">Chicken</p>
             </div>

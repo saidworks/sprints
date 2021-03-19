@@ -1,6 +1,13 @@
+<?php 
+   session_start();
+   if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
+       // redirect to your login page
+       header("Location: login.php"); 
+       exit();
+   }
+   $username = $_SESSION['username'];
 
-
-
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,6 +46,7 @@
         <div class="main__title"> Dashboard</div>
         <div class="main__sidebar">
             <ul class="sidebar-collection">
+                <li class="collection-item"><?php echo "Welcome ".$username; ?></li>
                 <li class="collection-item"><a href="../index.php"> Home</a></li>
                 <li class="collection-item"><a href="../aboutUs.php"> About Us</a></li>
                 <li class="collection-item"><a href="../contact.php"> Contact Us</a></li>
@@ -51,26 +59,27 @@
         echo "<table class='dash'>
         <thead>
         <tr>
+        <td>id</td>
         <td>Name</td>
         <td>Price</td>
-        <td>Category</td>
         <td>Action</td>
         </tr>
         </thead>";
         $sql = "SELECT * FROM products";
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
-        $result = $stmt->fetchall(PDO::FETCH_ASSOC);
-       foreach($result as $result){
-            echo " <tr>
-            <td>".$result['name']."</td>
-            <td>".$result['price']."</td>
-            <td>".$result['category']."</td>
-            <td> <a href='modify.php'> modify</a> | <a href='delete.php'>delete</a></td>
-            </tr>";
-        }
-        echo " </table>";
-        ?>
+        $result = $stmt->fetchall(PDO::FETCH_ASSOC); ?>
+        <? foreach($result as $result) : ?>
+        <tr>
+            <td><?= $result['id'] ?></td>
+            <td><?= $result['name'] ?></td>
+            <td><?= $result['price'] ?></td>
+            <td><a href="modify.php?id=<? echo $result['id'] ?>"> modify</a> | <a href='delete.php?id=<? echo $result['id'] ?>'>delete</a></td>
+            </tr>
+
+        <? endforeach; ?>
+        </table>
+        
         </div>
     </div>
     <div class="footer">

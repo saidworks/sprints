@@ -60,8 +60,11 @@ require_once "config.php";
                     //redirect using javascript
                     // echo "<script> window.location.assign('admin.php'); </script>";
                     //redirect using php 
+                    session_start();
+                    $_SESSION['username'] = $result["firstname"];
                     header("Location: admin.php"); 
-                    exit;
+                    exit();
+                    
                 }
                 else{
                     echo "login failed";
