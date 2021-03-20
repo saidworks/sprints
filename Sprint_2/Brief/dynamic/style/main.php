@@ -172,9 +172,9 @@ body {
   .main__products .appear {
     transform: translateY(50%); }
   .main__products .stretch {
-    flex: 100%;
+    flex: 200%;
     opacity: 1;
-    transform: translateY(-30%); }
+    transform: translateY(-10%); }
 
 @media (min-width: 768px) {
   body {

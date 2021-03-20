@@ -55,8 +55,9 @@ table {
   --font-medium: 4rem;
   --font-big: 6rem;
   --h1: 5rem;
-  --font-color:#7e1d11;
-  --main-color:#727272; }
+  --font-color: #7e1d11;
+  --main-color: #727272;
+  --font-secondary: #6a6a6a; }
 
 .footer {
   background-color: var(--font-color);
@@ -104,13 +105,6 @@ table {
   .main__about form input[type='email'] {
     width: 15%;
     height: var(--font-medium); }
-
-.main__about .dash {
-  border: 1px solid black;
-  padding: 1%; }
-
-.main__about .dash {
-  width: 100%; }
 
 body {
   max-width: 100%;
@@ -231,11 +225,14 @@ body {
       max-width: 100vw; }
       .navbar #desktop {
         font-size: var(--font-medium);
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         height: 10rem;
         visibility: visible;
         background-position: bottom;
         background-size: cover;
-        text-align: center; }
+        text-align: center;
+        color: var(--font-color); }
       .navbar__logo img {
         width: 50%; } }

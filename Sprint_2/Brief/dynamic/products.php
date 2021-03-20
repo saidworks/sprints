@@ -39,9 +39,9 @@
         <div class="main__title"> Dashboard</div>
         <div class="main__sidebar">
             <ul class="sidebar-collection">
-                <li class="collection-item"><a href="../index.php"> Home</a></li>
-                <li class="collection-item"><a href="../aboutUs.php"> About Us</a></li>
-                <li class="collection-item"><a href="../contact.php"> Contact Us</a></li>
+                <li class="collection-item"><a href="./index.php"> Home</a></li>
+                <li class="collection-item"><a href="./aboutUs.php"> About Us</a></li>
+                <li class="collection-item"><a href="./contact.php"> Contact Us</a></li>
             </ul>
         </div>
         <div class="main__products">
@@ -56,7 +56,7 @@
             
         
         <div class="products-panel" id="desktop-products">
-            <p class="description"><?= $value['name'];?></p>
+            <p class="description"><?= $value['name'];?> | <?= $value['price'];?> DH</p>
         </div>
         <? endforeach; ?>
     </div>
