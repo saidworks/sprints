@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,24 +27,61 @@
             </ul>
         </div>
         <div class="main__about">
+
         <?php
             /*
                 select data from specific product
-                ask if user is sure
-                submit to delete
+                output it to the sepcific input tags
+                change values in input tags
             */
             require_once "config.php";
-            if(isset($_GET['id'])){
+            session_start();
+            $id = $_SESSION['id'];
+            if(isset($_POST['name']) and isset($_POST['price'])){
+                $name = $_POST['name'];
+                $price = (int)$_POST['price'];
+         
+            }
+
+             
+    
+            $directory = "products/";
+            $destination = $directory.$name.$_FILES['upload']['name'];
+            $filename =$_FILES['upload']['tmp_name'];
+        
             
-            $id = $_GET['id'];
+                //check if the upload was successful
+                // I need to write more code to check type of image
+            if(isset($_POST["submit"])){
+                if($_FILES['upload']['error']==0){
+                    // switch($_FILES['upload']['type']){
+                    //     case[]
+    
+                    // }  
+                if (move_uploaded_file($filename,"$destination")){
+                    echo " product's information successfuly updated ";
+                }
+                    else  {
+                    echo "failure";
+                }
+                }
+                    else {
+                        if($_FILES['upload']['error']==1 || $_FILES['upload']['error']==2){
+                            echo "Your file is too big please select a smaller one! then try again!<br>";}
+                        else{
+                            echo "your file is only partly uploaded, either you forgot uploaded a file or your file size is bigger";
+                            }
+                }
+    
+                }
+           
+          
                     // query
-                $sql = "DELETE FROM products WHERE id=:id"; 
+                $sql = "UPDATE products SET name=:name, price=:price, image=:image WHERE id=$id"; 
                
-                $values = array(':id',$id);
+                $values = array(array(':name',$name),array(':price',$price),array(':image',$destination));
     
                 queryDB($sql,$values);
-                echo "product id :".$id. "was deleted successfully" ;
-            }
 
 
             ?>

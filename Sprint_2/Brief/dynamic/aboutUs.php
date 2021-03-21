@@ -13,18 +13,20 @@
     <div class="navbar">
         <div class="navbar__logo"><img src="images/logo@2x.png" alt="logo"></div>
         <div id="desktop" class="navbar__adbar">The Food you love at a price you can afford!</div>
-        <div class="navbar__login"><input class="btn" type="button" value="login" name="Login"></div>
+        <a href="./php/login.php"> <div class="navbar__login"><input class="btn" type="button" value="login" name="Login"></div></a>
     </div>
     <div class="main">
         <div class="main__title"> About US</div>
         <div class="main__sidebar">
             <ul class="sidebar-collection">
                 <li class="collection-item"><a href="./index.php"> Home</a></li>
+                <li class="collection-item"><a href="./products.php"> Products</a></li>
                 <li class="collection-item"><a href="./aboutUs.php"> About Us</a></li>
                 <li class="collection-item"><a href="./contact.php"> Contact Us</a></li>
             </ul>
         </div>
         <div class="main__about">
+        <!-- need to add a word from the CEO and a photo of the local -->
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis ut cumque, a distinctio est eos, ipsam dolores perferendis consequuntur nam aperiam perspiciatis? Maiores ad repudiandae, ipsam dolor ducimus quam unde?
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium nam nisi debitis, minima non aperiam quae suscipit amet esse sequi fugiat pariatur ducimus repellendus, deserunt repudiandae voluptate nulla laboriosam quam!
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor inventore assumenda ullam qui obcaecati esse perferendis adipisci, fugit voluptates officiis nihil, maxime sequi rerum. Fuga quos nemo perspiciatis error itaque.

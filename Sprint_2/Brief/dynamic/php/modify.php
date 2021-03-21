@@ -44,7 +44,7 @@
             ?>
 
 
-        <form action="" method="POST" enctype="multipart/form-data">
+        <form action="modify_process.php" method="POST" enctype="multipart/form-data">
         <label for="name">Product Name</label>
         <input type="text" name="name" value=<? echo $result['name'] ?>>
         <label for="price">Price</label>
@@ -54,65 +54,6 @@
         <input class="btn" type="submit" name="submit" value="modify">
         </form>
        
-
-        <?php
-            /*
-                select data from specific product
-                output it to the sepcific input tags
-                change values in input tags
-            */
-            require_once "config.php";
-            session_start();
-            $id = $_SESSION['id'];
-            if(isset($_POST['name']) and isset($_POST['price'])){
-                $name = $_POST['name'];
-                $price = (int)$_POST['price'];
-                var_dump($price);
-         
-            }
-
-             
-    
-            $directory = "products/";
-            $destination = $directory.$name.$_FILES['upload']['name'];
-            $filename =$_FILES['upload']['tmp_name'];
-        
-            
-                //check if the upload was successful
-                // I need to write more code to check type of image
-            if(isset($_POST["submit"])){
-                if($_FILES['upload']['error']==0){
-                    // switch($_FILES['upload']['type']){
-                    //     case[]
-    
-                    // }  
-                if (move_uploaded_file($filename,"$destination")){
-                    echo "file uploaded";
-                }
-                    else  {
-                    echo "failure";
-                }
-                }
-                    else {
-                        if($_FILES['upload']['error']==1 || $_FILES['upload']['error']==2){
-                            echo "Your file is too big please select a smaller one! then try again!<br>";}
-                        else{
-                            echo "your file is only partly uploaded";
-                            }
-                }
-    
-                }
-           
-          
-                    // query
-                $sql = "UPDATE products SET name=:name, price=:price, image=:image WHERE id=$id"; 
-               
-                $values = array(array(':name',$name),array(':price',$price),array(':image',$destination));
-    
-                queryDB($sql,$values);
-
-
-            ?>
         
         </div>
     </div>

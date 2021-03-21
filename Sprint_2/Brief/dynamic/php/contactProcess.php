@@ -43,8 +43,69 @@
             $sql = "INSERT INTO contactus (name,email,message) VALUES('" . $name . "','" . $email . "','" . $message . "')";
             // $pdo->query($sql);
             $values = array(array(':name',$name),array(':email',$email),array(':message',$email));
-            queryDB($sql,$values);
-            echo "<p> your message was sent Mr/Mrs $name, we will contact you soon";
+            $result = queryDB($sql,$values);
+            echo "<p> We received your message Mr/Mrs $name, we will contact you as soon as we can, meanwhile we hope you enjoy our menu";
+            // Mail function to send mail to the owner reference PHP manual another option is PHP MAILER to be studied further 
+            // $message = "Test"; this solution did not work for me and I do not want to change php.ini for now
+
+            // // In case any of our lines are larger than 70 characters, we should use wordwrap()
+            // $message = wordwrap($message, 70, "\r\n");
+
+            // // Send
+            // mail('zitouni.sd@gmail.com', 'Message from '.$name, $message,"From: webmaster@{$_SERVER['SERVER_NAME']}"); 
+
+            //             These answers are outdated and depreciated. Best practice..
+
+            // composer require phpmailer/phpmailer
+            // The next on your sendmail.php file just require the following
+
+          
+            //Import PHPMailer classes into the global namespace
+            //These must be at the top of your script, not inside a function
+            use PHPMailer\PHPMailer\PHPMailer;
+            use PHPMailer\PHPMailer\SMTP;
+            use PHPMailer\PHPMailer\Exception;
+            
+            //Load Composer's autoloader
+            require '../vendor/autoload.php';
+            
+            //Instantiation and passing `true` enables exceptions
+            $mail = new PHPMailer(true);
+            
+            try {
+                //Server settings
+                $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+                $mail->isSMTP();                                            //Send using SMTP
+                $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+                $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+                $mail->Username   = 'said.storage@gmail.com';                     //SMTP username
+                $mail->Password   = '2443421@Sa';                               //SMTP password
+                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+                $mail->Port       = 465;                                    //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+            
+                //Recipients
+                $mail->setFrom($email, 'Mailer');
+                $mail->addAddress('said.storage@gmail.com', 'Joe User');     //Add a recipient
+                $mail->addAddress('said.storage@gmail.com');               //Name is optional
+                $mail->addReplyTo($email, 'Information');
+                // $mail->addCC('cc@example.com');
+                // $mail->addBCC('bcc@example.com');
+            
+                // //Attachments
+                // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
+                // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
+            
+                //Content
+                $mail->isHTML(true);                                  //Set email format to HTML
+                $mail->Subject = 'Here is the subject';
+                $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+                $mail->AltBody = $message;
+            
+                $mail->send();
+                echo 'Message has been sent';
+            } catch (Exception $e) {
+                echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+            }
         ?>
         </div>
     </div>
