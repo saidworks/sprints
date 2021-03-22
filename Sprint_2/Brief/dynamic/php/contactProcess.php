@@ -60,52 +60,83 @@
             // The next on your sendmail.php file just require the following
 
           
+         
+/**
+ * This example shows settings to use when sending via Google's Gmail servers.
+ * This uses traditional id & password authentication - look at the gmail_xoauth.phps
+ * example to see how to use XOAUTH2.
+ * The IMAP section shows how to save this message to the 'Sent Mail' folder using IMAP commands.
+ */
+
             //Import PHPMailer classes into the global namespace
-            //These must be at the top of your script, not inside a function
             use PHPMailer\PHPMailer\PHPMailer;
             use PHPMailer\PHPMailer\SMTP;
-            use PHPMailer\PHPMailer\Exception;
-            
-            //Load Composer's autoloader
+
             require '../vendor/autoload.php';
+
+            //Create a new PHPMailer instance
+            $mail = new PHPMailer();
+
+            //Tell PHPMailer to use SMTP
+            $mail->isSMTP();
+
+            //Enable SMTP debugging
+            //SMTP::DEBUG_OFF = off (for production use)
+            //SMTP::DEBUG_CLIENT = client messages
+            //SMTP::DEBUG_SERVER = client and server messages
+            $mail->SMTPDebug = SMTP::DEBUG_OFF;
+
+            //Set the hostname of the mail server
+            $mail->Host = 'smtp.gmail.com';
+            //Use `$mail->Host = gethostbyname('smtp.gmail.com');`
+            //if your network does not support SMTP over IPv6,
+            //though this may cause issues with TLS
+
+            //Set the SMTP port number - 587 for authenticated TLS, a.k.a. RFC4409 SMTP submission
+            $mail->Port = 465;
+
+            //Set the encryption mechanism to use - STARTTLS or SMTPS
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+
+            //Whether to use SMTP authentication
+            $mail->SMTPAuth = true;
+
+            //Username to use for SMTP authentication - use full email address for gmail
+            $mail->Username = 'said.storage@gmail.com';
+
+            //Password to use for SMTP authentication
+            $mail->Password = '2443421@Sa';
+
+            //Set who the message is to be sent from
+            $mail->setFrom('said.storage@gmail.com', 'Said Green');
+
+
+            //Set who the message is to be sent to
+            $mail->addAddress('zitouni.sd@gmail.com');
+
+            //Set the subject line
+            $mail->Subject = 'PHPMailer GMail SMTP test';
+
+            //Read an HTML message body from an external file, convert referenced images to embedded,
+            //convert HTML into a basic plain-text alternative body
+            $mail->isHTML(true); 
+            $mail->Body    = $message;
+
+            // //Replace the plain text body with one created manually
+            $mail->AltBody = $message;
             
-            //Instantiation and passing `true` enables exceptions
-            $mail = new PHPMailer(true);
-            
-            try {
-                //Server settings
-                $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-                $mail->isSMTP();                                            //Send using SMTP
-                $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
-                $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-                $mail->Username   = 'said.storage@gmail.com';                     //SMTP username
-                $mail->Password   = '2443421@Sa';                               //SMTP password
-                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-                $mail->Port       = 465;                                    //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
-            
-                //Recipients
-                $mail->setFrom($email, 'Mailer');
-                $mail->addAddress('said.storage@gmail.com', 'Joe User');     //Add a recipient
-                $mail->addAddress('said.storage@gmail.com');               //Name is optional
-                $mail->addReplyTo($email, 'Information');
-                // $mail->addCC('cc@example.com');
-                // $mail->addBCC('bcc@example.com');
-            
-                // //Attachments
-                // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
-                // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
-            
-                //Content
-                $mail->isHTML(true);                                  //Set email format to HTML
-                $mail->Subject = 'Here is the subject';
-                $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-                $mail->AltBody = $message;
-            
-                $mail->send();
-                echo 'Message has been sent';
-            } catch (Exception $e) {
-                echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+            //send the message, check for errors
+            if (!$mail->send()) {
+                echo 'Mailer Error: ' . $mail->ErrorInfo;
+            } else {
+                echo " <br> Have a great day!";
+                //Section 2: IMAP
+                //Uncomment these to save your message in the 'Sent Mail' folder.
+                #if (save_mail($mail)) {
+                #    echo "Message saved!";
+                #}
             }
+
         ?>
         </div>
     </div>
