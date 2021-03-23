@@ -26,13 +26,13 @@
             </ul>
         </div>
         <div class="main__about">
-           <form class="contact-form" action="./php/contactProcess.php" method="POST">
+           <form name="contact" class="contact-form" action="./php/contactProcess.php" method="POST" onsubmit="return validateForm()" >
                <label for="name">Name:</label>
                <input type="text" name="name" value="" placeholder="enter your name please">
                <label for="email">Email:</label>
                <input type="email" value="" name="email" placeholder="enter your email please">
                <label for="message">Type your message here:</label>
-               <textarea name="message" value="" cols="100" rows="10">type your message here</textarea>
+               <textarea name="message" value="" cols="100" rows="10" placeholder="type your message here"></textarea>
                 <input class="btn" type="submit" value="Send">
            </form>
 
@@ -47,6 +47,7 @@
 
     </div>
 <script src="./js/menu.js"></script>
+<script src="./js/form.js"></script>
 </body>
 
 </html>
