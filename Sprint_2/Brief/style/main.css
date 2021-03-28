@@ -105,6 +105,9 @@ table {
   .main__about form input[type='email'] {
     width: 15%;
     height: var(--font-medium); }
+  .main__about form input[type='password'] {
+    width: 15%;
+    height: var(--font-medium); }
 
 body {
   max-width: 100%;

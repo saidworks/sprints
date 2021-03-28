@@ -31,17 +31,20 @@ require_once "config.php";
         <div class="main__sidebar">
             <ul class="sidebar-collection">
                 <li class="collection-item"><a href="../index.php"> Home</a></li>
+                <li class="collection-item"><a href="../products.php"> Products</a></li>
                 <li class="collection-item"><a href="../aboutUs.php"> About Us</a></li>
                 <li class="collection-item"><a href="../contact.php"> Contact Us</a></li>
             </ul>
         </div>
         <div class="main__about">
-        <form action="" method="POST">
+        
+        <form id="form" action="" method="POST">
+        <div id="error"></div>
         <label for="username">Username (your email)</label>
-        <input type="email" name="username">
+        <input type="email" id="username" name="username">
         <label for="password">Password</label>
-        <input type="password" name="password">
-        <input type="submit" name="submit">
+        <input type="password" id="password" name="password">
+        <input type="submit" name="submit" value="Login" class="btn">
         </form>
         <?php
         require_once "config.php";
@@ -88,7 +91,8 @@ require_once "config.php";
         <div class="footer__instagram"><img src="../images/198px-Instagram_logo_2016.svg.png" alt=""></div>
 
     </div>
-<script src="./js/menu.js"></script>
+<script src="../js/menu.js"></script>
+<script src="../js/form.js"></script>
 </body>
 
 </html>

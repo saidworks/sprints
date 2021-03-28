@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/main.css">
     <title>Welcome to Restauranto</title>
+    
 </head>
 
 <body>
@@ -26,13 +27,15 @@
             </ul>
         </div>
         <div class="main__about">
-           <form name="contact" class="contact-form" action="./php/contactProcess.php" method="POST" onsubmit="return validateForm()" >
-               <label for="name">Name:</label>
-               <input type="text" name="name" value="" placeholder="enter your name please">
+        
+           <form id="contact" name="contact" class="contact-form" action="./php/contactProcess.php" method="POST">
+               <div id="error"></div>
+               <label for="username">Name:</label>
+               <input type="text" id="username" name="username"  placeholder="enter your name please">
                <label for="email">Email:</label>
-               <input type="email" value="" name="email" placeholder="enter your email please">
+               <input type="email" id= "email"  name="email" placeholder="enter your email please">
                <label for="message">Type your message here:</label>
-               <textarea name="message" value="" cols="100" rows="10" placeholder="type your message here"></textarea>
+               <textarea name="message" id="message" cols="100" rows="10" placeholder="type your message here"></textarea>
                 <input class="btn" type="submit" value="Send">
            </form>
 
@@ -46,8 +49,8 @@
         <div class="footer__instagram"><img src="./images/198px-Instagram_logo_2016.svg.png" alt=""></div>
 
     </div>
-<script src="./js/menu.js"></script>
-<script src="./js/form.js"></script>
+<script src="./js/contact.js"></script>
+
 </body>
 
 </html>

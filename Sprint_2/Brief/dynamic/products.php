@@ -60,6 +60,7 @@
             <p class="description"><?= $value['name'];?> | <?= $value['price'];?> DH</p>
         </div>
         <? endforeach; ?>
+        
     </div>
     </div>
     <div class="footer">
@@ -71,6 +72,7 @@
 
     </div>
 <script src="./js/menu.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 </body>
 
 </html>
