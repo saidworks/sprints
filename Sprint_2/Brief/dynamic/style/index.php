@@ -156,21 +156,20 @@ body {
                padding: 5% 0%;
                 
             }
-  <?
-    require_once "../php/config.php";
-    $sql = "SELECT * FROM products";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute();
-    $result = $stmt->fetchall(PDO::FETCH_ASSOC); 
+    <?
+                require_once "../php/config.php";
+                $sql = "SELECT * FROM products ORDER BY id DESC LIMIT 1";
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute();
+                $result = $stmt->fetch(PDO::FETCH_ASSOC);
+                $i = 1;
     //use the result array to change background
-    $i = 1;
-    foreach($result as $value){
+  
     echo "  .main__products .products-panel:nth-child($i) {
-      background-image: url(../php/".$value['image'].");
+      background-image: url(../php/".$result['image'].");
       font-size: var(--font-big); }";
-      $i++;
-  } ?>
-
+ 
+?>
   
   .main__products .products-panel > * {
     transform: translateX(0%); }

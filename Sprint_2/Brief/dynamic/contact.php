@@ -28,7 +28,7 @@
         </div>
         <div class="main__about">
         
-           <form id="contact" name="contact" class="contact-form" action="./php/contactProcess.php" method="POST">
+           <form id="contact" class="contact-form" action="./php/contactProcess.php" method="POST">
                <div id="error"></div>
                <label for="username">Name:</label>
                <input type="text" id="username" name="username"  placeholder="enter your name please">

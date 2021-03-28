@@ -1,6 +1,7 @@
 const panels = document.querySelectorAll(".products-panel");
 
 
+
 function stretch() {
     this.classList.toggle("stretch");
 }

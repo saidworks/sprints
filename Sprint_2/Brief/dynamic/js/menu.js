@@ -10,8 +10,8 @@ function appear() {
 }
 
 function backToNormal() {
-    this.classList.toggle("stretch");
-    this.classList.toggle("appear");
+    this.classList.remove("stretch");
+    this.classList.remove("appear");
 }
 
 panels.forEach(

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/index.php">
     <title>Welcome to Restauranto</title>
 </head>
 
@@ -16,7 +16,7 @@
         <a href="./php/login.php"> <div class="navbar__login"><input class="btn" type="button" value="login" name="Login"></div></a>
     </div>
     <div class="main">
-        <div class="main__title"> Our Menu </div>
+        <div class="main__title">Today's Menu </div>
         <div class="main__sidebar">
             <ul class="sidebar-collection">
                 <li class="collection-item"><a href="#"> Home</a></li>
@@ -25,24 +25,23 @@
                 <li class="collection-item"><a href="./contact.php"> Contact Us</a></li>
             </ul>
         </div>
-        <div class="main__products">
+         <div class="main__products">
+            <?
+                require_once "./php/config.php";
+                $sql = "SELECT * FROM products ORDER BY id DESC LIMIT 1";
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute();
+                $result = $stmt->fetch(PDO::FETCH_ASSOC);
+                ?>
+                
+              
+       
         
-            <div class="products-panel" id="desktop-products">
-                <p class="description">Chicken</p>
-            </div>
-            <div class="products-panel" id="desktop-products">
-                <p class="description">Burger</p>
-            </div>
-            <div class="products-panel" id="desktop-products">
-                <p class="description">Pizza</p>
-            </div>
-            <div class="products-panel" id="desktop-products">
-                <p class="description">Salad</p>
-            </div>
-            <div class="products-panel" id="desktop-products">
-                <p class="description">Pasta</p>
-            </div>
-        </div>
+        <div class='products-panel' id='desktop-products'>
+            <p class="description"> <?= $result['name'] ?>| <?= $result['price'] ?> DH</p>
+        </div>"
+      
+    </div>
     </div>
     <div class="footer">
         <div class="footer__text">Join us on </div>

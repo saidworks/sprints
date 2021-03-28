@@ -40,7 +40,7 @@
     <div class="navbar">
         <div class="navbar__logo"><img src="../images/logo@2x.png" alt="logo"></div>
         <div id="desktop" class="navbar__adbar">The Food you love at a price you can afford!</div>
-        <div class="navbar__login"><input class="btn" type="button" value="logout" name="Login"></div>
+        <div class="navbar__login"><form method="POST" action="logout.php"><input class="btn" type="submit" value="logout" name="Login"></form></div>
     </div>
     <div class="main">
         <div class="main__title"> Dashboard</div>
@@ -84,7 +84,7 @@
     </div>
     <div class="footer">
         <div class="footer__text">Join us on</div>
-        <div class="footer__phone"><img src="./images/icons8-ringing-phone-96.png" alt=""></div>
+        <div class="footer__phone"><img src="../images/icons8-ringing-phone-96.png" alt=""></div>
         <div class="footer__fb"><img src="../images/fb.png" alt=""></div>
         <div class="footer__twitter"><img src="../images/twitter.png" alt=""></div>
         <div class="footer__instagram"><img src="../images/198px-Instagram_logo_2016.svg.png" alt=""></div>

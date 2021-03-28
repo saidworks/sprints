@@ -5,7 +5,7 @@ const errorElement = document.getElementById('error');
 
 form.addEventListener('submit', (e) => {
     let messages = [];
-    let validEmail = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
+    let validEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if (username.value === '' || username.value === null) {
         messages.push('name is required');
         console.log(messages);

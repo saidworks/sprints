@@ -28,8 +28,8 @@
         </div>
         <div class="main__about">
         <?php
-            if(isset($_POST['name']) and isset($_POST['email']) and isset($_POST['message'])){
-                $name = $_POST['name'];
+            if(isset($_POST['username']) and isset($_POST['email']) and isset($_POST['message'])){
+                $name = $_POST['username'];
                 $email = $_POST['email'];
                 $message = $_POST['message'];
             }
@@ -45,7 +45,7 @@
             // $pdo->query($sql);
             $values = array(array(':name',$name),array(':email',$email),array(':message',$email));
             $result = queryDB($sql,$values);
-            echo "<p> We received your message Mr/Mrs $name, we will contact you as soon as we can, meanwhile we hope you enjoy our menu";
+            echo "<p> We received your message Mr/Mrs $name we will contact you as soon as we can, meanwhile we hope you enjoy our menu";
             // Mail function to send mail to the owner reference PHP manual another option is PHP MAILER to be studied further 
             // $message = "Test"; this solution did not work for me and I do not want to change php.ini for now
 
@@ -143,7 +143,7 @@
     </div>
     <div class="footer">
         <div class="footer__text">Join us on</div>
-        <div class="footer__phone"><img src="./images/icons8-ringing-phone-96.png" alt=""></div>
+        <div class="footer__phone"><img src="../images/icons8-ringing-phone-96.png" alt=""></div>
         <div class="footer__fb"><img src="../images/fb.png" alt=""></div>
         <div class="footer__twitter"><img src="../images/twitter.png" alt=""></div>
         <div class="footer__instagram"><img src="../images/198px-Instagram_logo_2016.svg.png" alt=""></div>
