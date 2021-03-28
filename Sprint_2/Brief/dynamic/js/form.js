@@ -5,6 +5,7 @@ const errorElement = document.getElementById('error');
 
 form.addEventListener('submit', (e) => {
     let messages = [];
+    let validEmail = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
     if (username.value === '' || username.value === null) {
         messages.push('name is required');
         console.log(messages);
@@ -13,6 +14,9 @@ form.addEventListener('submit', (e) => {
         messages.push('password must be 6 or more characters');
     } else if (password.value.length >= 20) {
         messages.push('password must be 20 or less characters');
+    }
+    if (!username.value.match(validEmail)) {
+        messages.push('Your username must be a valid email address');
     } else if (password.value === username.value || password.value === "password") {
         messages.push('Password can not be password or username')
     }
