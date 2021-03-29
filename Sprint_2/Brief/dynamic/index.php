@@ -12,7 +12,9 @@
 <body>
     <div class="navbar">
         <div class="navbar__logo"><img src="images/logo@2x.png" alt="logo"></div>
-        <div id="desktop" class="navbar__adbar">The Food you love at a price you can afford!</div>
+        <div id="desktop" class="navbar__adbar">
+            <p class="scale-up-bl">The Food you love at a price you can afford!</p>
+        </div>
         <a href="./php/login.php"> <div class="navbar__login"><input class="btn" type="button" value="login" name="Login"></div></a>
     </div>
     <div class="main">
@@ -39,7 +41,7 @@
         
         <div class='products-panel' id='desktop-products'>
             <p class="description"> <?= $result['name'] ?>| <?= $result['price'] ?> DH</p>
-        </div>"
+        </div>
       
     </div>
     </div>

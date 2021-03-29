@@ -26,14 +26,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/style.css">
     <title>Welcome to Restauranto</title>
 </head>
 
 <body>
     <div class="navbar">
         <div class="navbar__logo"><img src="../images/logo@2x.png" alt="logo"></div>
-        <div id="desktop" class="navbar__adbar">The Food you love at a price you can afford!</div>
+        <div id="desktop" class="navbar__adbar">
+            <p class="scale-up-bl">The Food you love at a price you can afford!</p>
+        </div>
         <div class="navbar__login"><form method="POST" action="logout.php"><input class="btn" type="submit" value="logout" name="Login"></form></div>
     </div>
     <div class="main">
@@ -80,6 +82,7 @@
                 // }  
             if (move_uploaded_file($filename,"$destination")){
                 echo "<h2 class='main__title'> Product added successfully<h2>";
+                
             }
                 else  {
                 echo "failure";
@@ -94,7 +97,7 @@
             }
 
             }
-       
+            header("location:javascript://history.go(-3)");
       
                 // query
             $sql = "INSERT IGNORE INTO products (adminId,name,price,image) VALUES(:adminId,:name,:price,:image)"; 

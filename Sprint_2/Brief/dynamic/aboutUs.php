@@ -5,14 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/style.css">
     <title>Welcome to Restauranto</title>
 </head>
 
 <body>
     <div class="navbar">
         <div class="navbar__logo"><img src="images/logo@2x.png" alt="logo"></div>
-        <div id="desktop" class="navbar__adbar">The Food you love at a price you can afford!</div>
+        <div id="desktop" class="navbar__adbar">
+            <p class="scale-up-bl">The Food you love at a price you can afford!</p>
+        </div>
         <a href="./php/login.php"> <div class="navbar__login"><input class="btn" type="button" value="login" name="Login"></div></a>
     </div>
     <div class="main">

@@ -55,9 +55,9 @@ table {
   --font-medium: 4rem;
   --font-big: 6rem;
   --h1: 5rem;
-  --font-color: #7e1d11;
-  --main-color: #727272;
-  --font-secondary: #6a6a6a; }
+  --font-color: #0c0cc0;
+  --main-color: #c0c0c0;
+  --font-secondary: #0c0cc0; }
 
 .footer {
   background-color: var(--font-color);
@@ -99,11 +99,13 @@ table {
     color: var(--main-color);
     border-radius: 15rem;
     font-size: var(--font-small); }
+  .main__about form textarea {
+    width: 80%; }
   .main__about form input[type='text'] {
-    width: 15%;
+    width: 30%;
     height: var(--font-medium); }
   .main__about form input[type='email'] {
-    width: 15%;
+    width: 30%;
     height: var(--font-medium); }
   .main__about form input[type='password'] {
     width: 15%;
@@ -148,7 +150,8 @@ body {
     background-size: 100%;
     width: 95vw;
     margin: 2%;
-    opacity: 30%; }
+    opacity: 30%;
+    color: var(--font-secondary); }
   .main__products .products-panel:nth-child(1) {
     background-image: url(../images/1.jpg);
     font-size: var(--font-big); }
@@ -204,7 +207,7 @@ body {
   align-items: center;
   max-width: 98vw; }
   .navbar__logo img {
-    width: 20vw; }
+    width: 15vw; }
   .navbar__adbar {
     background-image: url(../images/food-366875_1280.jpg);
     background-position: bottom;
@@ -275,4 +278,4 @@ body {
         -webkit-transform-origin: 0% 100%;
         transform-origin: 0% 100%; } }
       .navbar__logo img {
-        width: 50%; } }
+        width: 40%; } }

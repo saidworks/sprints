@@ -50,12 +50,13 @@ table {
 
 :root {
   font-size: 62.5%;
-  --font-small: 2rem;
-  --font-medium: 4rem;
-  --font-big: 6rem;
-  --h1: 5rem;
-  --font-color:#7e1d11;
-  --main-color:#727272; }
+    --font-small: 2rem;
+    --font-medium: 4rem;
+    --font-big: 6rem;
+    --h1: 5rem;
+    --font-color: #0c0cc0;
+    --main-color: #c0c0c0;
+    --font-secondary: #0c0cc0;}
 
 .footer {
   background-color: var(--font-color);
@@ -150,7 +151,13 @@ body {
     background-size: 100%;
     width: 95vw;
     margin: 2%;
-    opacity: 30%; }
+    opacity: 30%;
+    color: var(--font-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
     .description {
                text-align: center;
                padding: 5% 0%;
@@ -215,7 +222,7 @@ body {
   align-items: center;
   max-width: 98vw; }
   .navbar__logo img {
-    width: 20vw; }
+    width: 15vw; }
   .navbar__adbar {
     background-image: url(../images/food-366875_1280.jpg);
     background-position: bottom;
@@ -246,4 +253,30 @@ body {
         background-size: cover;
         text-align: center; }
       .navbar__logo img {
-        width: 50%; } }
+        width: 40%; } }
+        .navbar #desktop .scale-up-bl {
+          -webkit-animation: scale-up-bl 2s cubic-bezier(0.39, 0.575, 0.565, 1) infinite both;
+          animation: scale-up-bl 2s cubic-bezier(0.39, 0.575, 0.565, 1) infinite both; }
+    @-webkit-keyframes scale-up-bl {
+      0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        -webkit-transform-origin: 0% 100%;
+        transform-origin: 0% 100%; }
+      100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: 0% 100%;
+        transform-origin: 0% 100%; } }
+    @keyframes scale-up-bl {
+      0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        -webkit-transform-origin: 0% 100%;
+        transform-origin: 0% 100%; }
+      100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: 0% 100%;
+        transform-origin: 0% 100%; } }
+   

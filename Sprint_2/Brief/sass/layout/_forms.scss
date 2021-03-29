@@ -11,12 +11,15 @@
                 border-radius: 15rem;
                 font-size: var(--font-small);
             }
+            textarea {
+                width: 80%;
+            }
             input[type='text'] {
-                width: 15%;
+                width: 30%;
                 height: var(--font-medium);
             }
             input[type='email'] {
-                width: 15%;
+                width: 30%;
                 height: var(--font-medium);
             }
             input[type='password'] {
