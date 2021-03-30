@@ -254,7 +254,7 @@ body {
         background-size: cover;
         text-align: center; }
       .navbar__logo img {
-        width: 15%; } }
+        width: 40%; } }
 
 
         .navbar #desktop .scale-up-bl {

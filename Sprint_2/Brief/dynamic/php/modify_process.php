@@ -66,8 +66,7 @@
                 // I need to write more code to check type of image
             if(isset($_POST["submit"])){
                 if($_FILES['upload']['error']==0){
-                    // switch($_FILES['upload']['type']){
-                    //     case[]
+        
                     
                     // query
                 $sql = "UPDATE products SET name=:name, price=:price, image=:image WHERE id=$id"; 
@@ -76,7 +75,7 @@
     
                 queryDB($sql,$values);
     
-                    // }  
+                     
                 if (move_uploaded_file($filename,"$destination")){
                     echo " product's information successfuly updated ";
                 }
@@ -88,7 +87,16 @@
                         if($_FILES['upload']['error']==1 || $_FILES['upload']['error']==2){
                             echo "Your file is too big please select a smaller one! then try again!<br>";}
                         else{
-                            echo "your file is only partly uploaded, either you forgot uploaded a file or your file size is bigger";
+                            echo "Your information has been successfully modified, the previous product picture was not changed <br>
+                            <a href='javascript:history.go(-2)'>Go back</a>  ";
+                                   // query
+                            $sql = "UPDATE products SET name=:name, price=:price WHERE id=$id"; 
+                        
+                            $values = array(array(':name',$name),array(':price',$price));
+                
+                            queryDB($sql,$values);
+                            
+                            
                             }
                 }
     

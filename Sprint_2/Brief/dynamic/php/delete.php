@@ -55,7 +55,11 @@
                 $values = array(':id',$id);
     
                 queryDB($sql,$values);
-                echo "product id :".$id. "was deleted successfully" ;
+                echo "product id :".$id. "was deleted successfully <br>
+                <a href='javascript:history.go(-2)'>Go back</a>  " ;
+            }
+            else {
+                echo "Sorry there was some error please try again!"
             }
 
 

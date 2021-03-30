@@ -81,7 +81,8 @@
 
                 // }  
             if (move_uploaded_file($filename,"$destination")){
-                echo "<h2 class='main__title'> Product added successfully<h2>";
+                echo "<h2 class='main__title'> Product added successfully<h2><br>
+                <a href='javascript:history.go(-2)'>Go back</a>";
                 
             }
                 else  {
@@ -97,7 +98,7 @@
             }
 
             }
-            header("location:javascript://history.go(-3)");
+           
       
                 // query
             $sql = "INSERT IGNORE INTO products (adminId,name,price,image) VALUES(:adminId,:name,:price,:image)"; 
