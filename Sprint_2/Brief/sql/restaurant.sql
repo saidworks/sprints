@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  Dim 28 mars 2021 à 21:40
+-- Généré le :  mer. 31 mars 2021 à 20:54
 -- Version du serveur :  8.0.18
 -- Version de PHP :  7.3.11
 
@@ -141,7 +141,9 @@ INSERT INTO `contactus` (`id`, `name`, `email`, `message`) VALUES
 (67, '', '', ''),
 (68, '', '', ''),
 (69, '', '', ''),
-(70, 'zitouni.sd@gmail.com', 'zeta@email.com', 'test');
+(70, 'zitouni.sd@gmail.com', 'zeta@email.com', 'test'),
+(71, 'saidworks', 'zitouni.sd@gmail.com', 'Test for today'),
+(72, 'zitouni.sd@gmail.com', 'zitouni.sd@gmail.com', 'test\r\n');
 
 -- --------------------------------------------------------
 
@@ -178,11 +180,12 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `adminId`, `name`, `price`, `category`, `image`) VALUES
-(1, 1, 'Chicken', 22, NULL, 'products/Chicken1.jpg'),
+(1, 1, 'Chicken', 23, NULL, 'products/Chicken1.jpg'),
 (2, 1, 'Pizza', 25, NULL, 'products/Pizza3.jpg'),
 (3, 1, 'Pasta', 18, NULL, 'products/Pasta5.jpg'),
 (4, 1, 'Salad', 15, NULL, 'products/Salad4.jpg'),
-(5, 1, 'Hamburger', 30, NULL, 'products/Hamburger2.jpg');
+(5, 1, 'Hamburger', 25, NULL, 'products/Hamburger2.jpg'),
+(44, 1, 'lentilles', 16, NULL, 'products/lentilleslentilles.jpg');
 
 -- --------------------------------------------------------
 
@@ -263,13 +266,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT pour la table `contactus`
 --
 ALTER TABLE `contactus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 
 --
 -- AUTO_INCREMENT pour la table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT pour la table `users`
