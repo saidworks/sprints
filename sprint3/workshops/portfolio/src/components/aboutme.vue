@@ -8,7 +8,7 @@
   
   <div class="card border-0">
       <div class="row">
-     <img class="photo" src="../assets/photo.jpg" alt="photo">
+     <img class="photo" src="../assets/said.jpg" alt="photo">
       </div>
 <div class="row">
   <div class="col-sm-6">
@@ -28,7 +28,12 @@
     <li class="list-group-item border-0 text-primary">Phone: 0655887814</li>
     <li class="list-group-item border-0 text-primary">City: Salé</li>
     <li class="list-group-item border-0 text-primary">Languages : Arabic, French, English, Turkish</li>
-    <li class="list-group-item border-0 w-50 d-flex justify-content-evenly text-primary"><fa icon="coffee"></fa><fa icon="flask"></fa><fa icon="github"></fa></li>
+    <li class="list-group-item border-0 w-25 d-flex justify-content-evenly text-primary"><fa icon="coffee"></fa><fa icon="flask"></fa><fa :icon="['fab', 'facebook-f']"></fa>
+    <fa :icon="['fab', 'linkedin']"></fa>
+    <fa :icon="['fab', 'twitter']"></fa>
+    <fa :icon="['fab', 'google']"></fa>
+    <fa icon="phone"></fa>
+    </li>
   </ul>
 </div>
   </div>
@@ -55,7 +60,7 @@ export default {
     display: block;
     margin: 1rem auto;
     border-radius: 50%;
-    width: 20%;
+    width: 50Vmin;
     
 }
 

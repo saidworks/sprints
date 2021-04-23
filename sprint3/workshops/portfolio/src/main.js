@@ -3,10 +3,10 @@ import App from "./App.vue";
 import router from "./router";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faCoffee, faFlask } from '@fortawesome/free-solid-svg-icons'
+import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faTwitter, faLinkedin, faGoogle } from '@fortawesome/free-brands-svg-icons';
 
-library.add(faCoffee, faFlask, faGithub)
+library.add(faPhone, faTwitter, faLinkedin, faFacebookF, faGoogle)
 
 createApp(App).use(router).component('fa', FontAwesomeIcon).mount("#app");

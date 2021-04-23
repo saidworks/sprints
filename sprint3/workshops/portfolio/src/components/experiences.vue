@@ -7,43 +7,40 @@
   </div>
     <div class="container d-flex bg-dark">
         <div class="container d-flex-column border-end">
-             <div class="card bg-dark border-0">
+             <div class="card bg-dark border-0 border-bottom border-white">
   <div class="card-body bg-dark ">
-    <h5 class="card-title ">Card title</h5>
-    <h6 class="card-subtitle mb-2 text-muted ">Card subtitle</h6>
-    <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    <h5 class="card-title ">Full-stack developper apprentice</h5>
+    <h6 class="card-subtitle mb-2 text-muted ">Youcode, 2020-2022</h6>
+    <p class="card-text "> A program that prepares apprentices to become full-stack developper using different technologies which depends on the skills they want to improve and the career choice they make  </p>
+    <a href="https://youcode.ma/" class="card-link text-muted">School Website</a>
   </div>
 </div>
  <div class="card bg-dark border-0">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    <h5 class="card-title"> Master of Sciences</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Aix-Marseille, 2018-2019</h6>
+    <p class="card-text"> Environmental Management master program at OSU Pythéas Institute with focus on training students to tackle and problem solve any issues related to environemental management like certification, audit and sustainability analysis</p>
+    <a href="https://www.osupytheas.fr/" class="card-link text-muted">Institute website</a>
+   
   </div>
 </div>
         </div>
   
  <div class="container d-flex-column bg-dark">
-             <div class="card bg-dark border-0">
+             <div class="card bg-dark border-0 border-bottom border-white">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    <h5 class="card-title">Assistant QSE Manager</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Fauché Aix-en-Provence,2019</h6>
+    <p class="card-text"> Assist the manager in all tasks related to safety and environemental management certification and prepare the necessary documentation and tools</p>
+    <a href="https://www.fauche.com/" class="card-link text-muted">Fauché Aix-en-Provence</a>
   </div>
 </div>
  <div class="card bg-dark border-0" >
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    <h5 class="card-title">Freelance Teacher and Translator</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Idealog school,2018</h6>
+    <p class="card-text">Prepare, Teach and control progress of Turkish language student as well as provide assistance to Turkish expats at demand.</p>
+    <a href="http://www.idealog.ma/" class="card-link text-muted">Idealog</a>
   </div>
 </div>
         </div>
@@ -66,13 +63,7 @@ export default {
     align-items: center;
 
     }
-.photo {
-    display: block;
-    margin: 1rem auto;
-    border-radius: 50%;
-    width: 20%;
-    
-}
+
 
 h2 {
     font-size: 3rem;
