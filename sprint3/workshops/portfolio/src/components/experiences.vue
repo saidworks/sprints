@@ -6,7 +6,7 @@
      <div class="line"></div>
   </div>
     <div class="container d-flex bg-dark">
-        <div class="container d-flex-column">
+        <div class="container d-flex-column border-end">
              <div class="card bg-dark border-0">
   <div class="card-body bg-dark ">
     <h5 class="card-title ">Card title</h5>

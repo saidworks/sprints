@@ -16,7 +16,9 @@ export default {
 <style lang="scss" scoped>
 
 .title{
-    background-image: url('../assets/bg.jpg');
+    background-image: url('../assets/img/bg-blue.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     height : 100vh;
     color: white;
     font-family: 'Montserrat', sans-serif;
