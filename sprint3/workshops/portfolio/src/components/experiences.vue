@@ -2,7 +2,7 @@
 <div class="container text-white border-0 bg-dark" style="max-width:100vw">
   <div class="title">
      <h2>Experiences</h2> 
-     <h5>Professional and Academic</h5>
+     <h5> Academic and Professional </h5>
      <div class="line"></div>
   </div>
     <div class="container d-flex bg-dark">

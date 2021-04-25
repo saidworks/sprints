@@ -14,4 +14,5 @@ $primary : #0B0B61;
 *{
    font-family: 'Montserrat', sans-serif;
 }
+
 </style>

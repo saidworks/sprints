@@ -1,9 +1,12 @@
 <template>
-<div class="container border-0 text-primary">
+<div  class="container border-0 text-primary">
   <div class="title">
+    <transition name='bounce'>
      <h2>ABOUT ME</h2> 
+      </transition>
       <div class="line"></div>
      <h5>HOPE TO KNOW YOU AFTER</h5>
+    
   </div>
   
   <div class="card border-0">
@@ -28,7 +31,8 @@
     <li class="list-group-item border-0 text-primary">Phone: 0655887814</li>
     <li class="list-group-item border-0 text-primary">City: Salé</li>
     <li class="list-group-item border-0 text-primary">Languages : Arabic, French, English, Turkish</li>
-    <li class="list-group-item border-0 w-25 d-flex justify-content-evenly text-primary"><fa icon="coffee"></fa><fa icon="flask"></fa><fa :icon="['fab', 'facebook-f']"></fa>
+    <li class="list-group-item border-0 w-25 d-flex justify-content-evenly text-primary">
+      <fa :icon="['fab', 'facebook-f']"></fa>
     <fa :icon="['fab', 'linkedin']"></fa>
     <fa :icon="['fab', 'twitter']"></fa>
     <fa :icon="['fab', 'google']"></fa>
@@ -40,11 +44,20 @@
 </div>
  </div>
  </div>
+
 </template>
 
 <script>
 export default {
-
+  data:function(){
+    return {
+      display: true,animationInfinite: {
+  classes: 'fadeIn',
+  duration: 5000,
+  iteration: 'infinite'
+}
+    }
+  }
 }
 </script>
 
@@ -73,4 +86,22 @@ h2 {
   margin: auto;
   border-bottom: 2px solid;
 }
+.bounce-enter-active {
+  animation: bounce-in 0.5s;
+}
+.bounce-leave-active {
+  animation: bounce-in 0.5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 </style>
