@@ -1,7 +1,10 @@
 <template>
-  <div class="card text-white bg-primary" style="height: 90vh">
-    <form @submit.prevent="onSubmit" class="card border-dark row col-4">
-      <h1 class="text-dark">sign in</h1>
+  <div class="container mt-5">
+    <form
+      @submit.prevent="onSubmit"
+      class="card border-dark row col-lg-4 offset-lg-4"
+    >
+      <h1 class="text-dark animate__animated animate__bounce">sign in</h1>
       <div class="form-group text-dark">
         <label for="exampleInputEmail1">Email address</label>
         <input
@@ -25,17 +28,23 @@
           placeholder="Password"
           v-model="password"
         />
+        <router-link class="btn btn-outline-primary my-2 my-sm-1" to="/forgot"
+          >Forget your password</router-link
+        >
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-primary">Submit</button>
       </div>
     </form>
+    <div>{{ email }}</div>
     <div v-show="success">Login successfully</div>
+
     <!-- <div v-else>please try again</div> -->
   </div>
 </template>
 <script>
 export default {
+  name: 'signin',
   data: function () {
     return {
       email: '',
@@ -44,13 +53,21 @@ export default {
       success: false
     }
   },
+  props: ['submitted'],
   methods: {
     onSubmit() {
-      if (this.email === this.admin[0] && this.password === this.admin[1]) {
+      let datas = JSON.parse(localStorage.getItem('datas'))
+      console.log(datas)
+      if (this.email == datas.email && this.password == datas.password) {
         this.email = ''
         this.password = ''
         this.success = true
-        this.$router.push('Home')
+        // this.$router.push('/')
+      }
+    },
+    verify(props) {
+      if (this.email === props[1] && this.password === props[2]) {
+        return props
       }
     }
   }

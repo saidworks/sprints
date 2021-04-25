@@ -1,20 +1,17 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar shadow bg-white flex-nowrap flex-row fixed-top">
     <a class="navbar-brand" href="#">Youcode</a>
-    <div
-      class="d-flex justify-content-between collapse navbar-collapse"
-      id="navbarNav"
-    >
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <router-link class="nav-link pr-3" to="/signin">sign in</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link class="nav-link pr-3" to="/">sign up</router-link>
-        </li>
-      </ul>
+    <div>
+      <router-link class="btn btn-outline-primary my-2 my-sm-1" to="/signin"
+        >sign in</router-link
+      >
+
+      <router-link class="btn btn-outline-primary my-2 my-sm-1" to="/"
+        >sign up</router-link
+      >
     </div>
   </nav>
+
   <router-view />
 </template>
 
@@ -25,6 +22,10 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  $spacer: 1rem;
+  .mt-5 {
+    margin-top: $spacer * 10 !important;
+  }
 }
 
 #nav {
