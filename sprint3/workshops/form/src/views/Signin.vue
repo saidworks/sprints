@@ -28,7 +28,7 @@
           placeholder="Password"
           v-model="password"
         />
-        <router-link class="btn btn-outline-primary my-2 my-sm-1" to="/forgot"
+        <router-link class="btn btn-outline-dark my-2 my-sm-1" to="/forgot"
           >Forget your password</router-link
         >
       </div>

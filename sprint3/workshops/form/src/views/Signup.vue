@@ -22,7 +22,7 @@
           type="email"
           class="form-control"
           id="Email"
-          placeholder="Password"
+          placeholder="Email"
           v-model="email"
         />
       </div>
