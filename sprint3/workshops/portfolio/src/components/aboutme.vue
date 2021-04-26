@@ -51,12 +51,11 @@
 export default {
   data:function(){
     return {
-      display: true,animationInfinite: {
-  classes: 'fadeIn',
-  duration: 5000,
-  iteration: 'infinite'
-}
+      display: true
     }
+  },
+  components:{
+    animate
   }
 }
 </script>

@@ -69,7 +69,6 @@ export default {
   },
   methods: {
     onSubmit() {
-      let user = [this.fullName, this.email, this.password]
       this.users = {
         fullname: this.fullName,
         email: this.email,
