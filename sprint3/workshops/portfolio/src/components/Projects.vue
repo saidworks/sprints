@@ -18,215 +18,175 @@
 
             <table>
 
-                <tr>
-                    <td class="dt"><p class="text-info me-3">5 months ago</p></td>
+                <tr data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
+                    <td class="dt"><p class="text-info me-3">1 week ago</p></td>
                     <td><pre class="text-white sign s-software">&#60;&#62;</pre></td>
                     <td>
                         <div class="flx">
                             <p class="badges software text-white">SOFTWARE</p>
-                            <p class="text-white">IG_AUTOMATION_BOT (WORK IN PROGRESS)</p>
+                            <p class="text-white">POMODORO TIMER WINDOWS (WORK IN PROGRESS)</p>
                         </div>
                     </td>
                 </tr>
-                <tr>
+                <tr data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
                     <td></td>
                     <td></td>
                     <td>
-                        <img alt="ERR" src="../assets/projects/ig.gif">
+                        <img alt="POMODORO" src="../assets/img/projects/pomodoro.png">
                     </td>
                 </tr>
-                <tr>
+                <tr data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
                     <td></td>
                     <td></td>
                     <td>
                         <p class="text-info"> 
-                            Python script for Instagram automation using Instaloader. 
-                            Used for auto following and DM. 
-                            Easily configurable through Yaml config files!
+                            Pomodoro timer GUI using Python tkinter package used for work and break timing following the pomodoro technique. 
                         </p>
-                        <p class="text-info">Link : <a href="https://github.com/hbollon/IG_Automation_Bot" class="text-white">https://github.com/hbollon/IG_Automation_Bot</a></p>
+                        <p class="text-info">Link : <a href="https://github.com/saidworks/python_bootcamp/tree/main/100DaysOfCode/day28_Pomodoro" class="text-white">Link to Github</a></p>
                     </td>
                 </tr>
 
 
-                <tr>
-                    <td class="dt"><p class="text-info me-3">7 months ago</p></td>
+                <tr data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
+                    <td class="dt"><p class="text-info me-3">1 months ago</p></td>
                     <td><pre class="text-white sign s-library">&#60;&#62;</pre></td>
                     <td>
                         <div class="flx">
-                            <p class="badges library text-white">LIBRARY</p>
-                            <p class="text-white">GO-EDLIB</p>
+                            <p class="badges software text-white">Software</p>
+                            <p class="text-white">US STATES QUIZ</p>
                         </div>
                     </td>
                 </tr>
-                <tr>
+                <tr data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
                     <td></td>
                     <td></td>
                     <td>
-                        <img alt="ERR" src="../assets/projects/edlib.jpg">
+                        <img alt="ERR" src="../assets/img/projects/US_QUIZ.png">
                     </td>
                 </tr>
-                <tr>
+                <tr data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
                     <td></td>
                     <td></td>
                     <td>
                         <p class="text-info"> 
-                            Golang string comparison and edit distance algorithms library, 
-                            featuring : Levenshtein, LCS, Hamming, Damerau levenshtein 
-                            (OSA and Adjacent transpositions algorithms), Jaro-Winkler, Cosine, etc.
+                            A quiz from https://www.sporcle.com/ converted to GUI with an interactive guessing program until user exit it and get a personnalized file containing the US STATES he did not guess.
                         </p>
-                        <p class="text-info">Link : <a href="https://github.com/hbollon/go-edlib" class="text-white">https://github.com/hbollon/go-edlib</a></p>
+                        <p class="text-info">Link : <a href="https://github.com/saidworks/python_bootcamp/tree/main/100DaysOfCode/day25/us-states-game-end" class="text-white">Link to Github</a></p>
                     </td>
                 </tr>
 
 
-                <tr>
-                    <td class="dt"><p class="text-info me-3">8 months ago</p></td>
+                <tr data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
+                    <td class="dt"><p class="text-info me-3">2 months ago</p></td>
                     <td><pre class="text-white sign s-game">&#60;&#62;</pre></td>
                     <td>
                         <div class="flx">
                             <p class="badges game text-white">VIDEO GAME</p>
-                            <p class="text-white">GYRO'BALL</p>
+                            <p class="text-white">SNAKE</p>
                         </div>
                     </td>
                 </tr>
-                <tr>
+                <tr data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
                     <td></td>
                     <td></td>
                     <td>
-                        <img alt="ERR" src="../assets/projects/gyroball.jpg">
+                        <img alt="ERR" src="../assets/img/projects/snake.gif">
                     </td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
                     <td>
-                        <p class="text-info"> 
-                            3D labyrinth game project for Android using Unity. Use device gyroscope.
+                        <p data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500" class="text-info"> 
+                            2D game snake game using turtle package that record high score. 
                         </p>
-                        <p class="text-info">Link : <a href="https://play.google.com/store/apps/details?id=com.BitsPlease.GyroBall&hl=fr&fbclid=IwAR0itwUAcbpAl3TgkFGiSrQz_CHTRpWjSXTQZqNGPESikdOJWZ6DIrk5qAA" class="text-white">Google Play</a></p>
+                        <p class="text-info">Link : <a href="https://github.com/saidworks/python_bootcamp/tree/main/100DaysOfCode/day20" class="text-white"> Link to Github</a></p>
                     </td>
                 </tr>
 
 
-                <tr>
-                    <td class="dt"><p class="text-info me-3">10 months ago</p></td>
+                <tr data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500"> 
+                    <td class="dt"><p class="text-info me-3">2 months ago</p></td>
                     <td><pre class="text-white sign s-script">&#60;&#62;</pre></td>
                     <td>
                         <div class="flx">
-                            <p class="badges script text-white">SCRIPT</p>
-                            <p class="text-white">GYROSCOPECONTROL</p>
+                            <p class="badges website text-white">WEB APP</p>
+                            <p class="text-white">Is Palindrom</p>
                         </div>
                     </td>
                 </tr>
-                <tr>
+                <tr data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
                     <td></td>
                     <td></td>
                     <td>
-                        
+                        <img alt="ERR" src="../assets/img/projects/ispalindrom.png">
                     </td>
                 </tr>
-                <tr>
+                <tr data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
                     <td></td>
                     <td></td>
                     <td>
                         <p class="text-info"> 
-                            Unity script used for smooth and customizable object rotation with gyroscope. 
-                            It include initial calibration with offset, rotation speed, 
-                            smoothing parameter editable in Unity inspector and debug overlay.
+                            A script written in PHP that tells if the word entered is palindrom
                         </p>
-                        <p class="text-info">Link : <a href="https://github.com/hbollon/GyroscopeControl" class="text-white">https://github.com/hbollon/GyroscopeControl</a></p>
+                        <p class="text-info">Link : <a href="https://github.com/saidworks/palindrom" class="text-white">https://github.com/saidworks/palindrom</a></p>
                     </td>
                 </tr>
-
-
-                <tr>
-                    <td class="dt"><p class="text-info me-3">11 months ago</p></td>
-                    <td><pre class="text-white sign s-game">&#60;&#62;</pre></td>
-                    <td>
-                        <div class="flx">
-                            <p class="badges game text-white">VIDEO GAME</p>
-                            <p class="text-white">URBALOG</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <img alt="ERR" src="../assets/projects/urba.jpg">
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <p class="text-info"> 
-                            Android adaptation of board game using Nearby Connections API and Java for the LAET
-                        </p>
-                        <p class="text-info">Link : <a href="https://github.com/hbollon/Urbalog" class="text-white">https://github.com/hbollon/Urbalog</a></p>
-                    </td>
-                </tr>
-
-
-                <tr>
-                    <td class="dt"><p class="text-info me-3">11 months ago</p></td>
-                    <td><pre class="text-white sign s-library">&#60;&#62;</pre></td>
-                    <td>
-                        <div class="flx">
-                            <p class="badges library text-white">LIBRARY</p>
-                            <p class="text-white">ANDROID-SQLITE-TOOLBOX</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <p class="text-info"> 
-                            Android java package designed to manage any sqlite database. 
-                            Includes creation of the db and interactions with it (CRUD), 
-                            import and export in several file formats (easily adaptable to any other format) 
-                            and synchronization in http.
-                        </p>
-                        <p class="text-info">Link : <a href="https://github.com/hbollon/android-sqlite-toolbox" class="text-white">https://github.com/hbollon/android-sqlite-toolbox</a></p>
-                    </td>
-                </tr>
-
-
-                <tr>
-                    <td class="dt"><p class="text-info me-3">1 year ago</p></td>
+                <tr data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
+                    <td class="dt"><p class="text-info me-3">1 month ago</p></td>
                     <td><pre class="text-white sign s-website">&#60;&#62;</pre></td>
                     <td>
                         <div class="flx">
-                            <p class="badges website text-white">WEBSITE</p>
-                            <p class="text-white">LE-PARRAINAGE-BOURSORAMA</p>
+                            <p class="badges website text-white">WEBSITE </p>
+                            <p class="text-white">Restaurant dynamic website</p>
                         </div>
                     </td>
                 </tr>
-                <tr>
+                <tr data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
                     <td></td>
                     <td></td>
                     <td>
-                        <img alt="ERR" src="../assets/projects/boursoweb.jpg">
+                        <img alt="ERR" src="../assets/img/projects/restaurant.png">
                     </td>
                 </tr>
-                <tr>
+                <tr data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
                     <td></td>
                     <td></td>
                     <td>
                         <p class="text-info"> 
-                            Website built with Laravel. Used to promote and manage sponsorships for a online bank. 
-                            Hosted on personnal vps.
+                          A dynamic website for a restaurant with an admin dashboard for content management and a possibility of users to contact admin.
                         </p>
-                        <p class="text-info">Link : <a href="https://le-parrainage-boursorama.fr" class="text-white">https://le-parrainage-boursorama.fr</a></p>
+                        <p class="text-info">Link : <a href="https://github.com/saidworks/sprints/tree/main/Sprint_2/Brief/dynamic" class="text-white">Link to Github</a></p>
                     </td>
                 </tr>
 

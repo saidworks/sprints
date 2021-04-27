@@ -95,7 +95,7 @@ export default {
 
 img {
   width: 80%;
-  animation: move 1s 5;
+  animation: move 1s infinite;
 }
 
 @keyframes move {

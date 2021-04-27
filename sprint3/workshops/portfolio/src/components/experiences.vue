@@ -1,11 +1,17 @@
 <template>
 <div class="container text-white border-0 bg-dark" style="max-width:100vw">
   <div class="title">
-     <h2>Experiences</h2> 
-     <h5> Academic and Professional </h5>
+     <h2 data-aos="fade-up"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine" >Experiences</h2> 
+     <h5 data-aos="fade-up"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine"> Academic and Professional </h5>
      <div class="line"></div>
   </div>
-    <div class="container d-flex bg-dark">
+    <div class="container d-flex bg-dark" data-aos="fade-down"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine" >
         <div class="container d-flex-column border-end">
              <div class="card bg-dark border-0 border-bottom border-white">
   <div class="card-body bg-dark ">

@@ -2,14 +2,14 @@
 <div  class="container border-0 text-primary">
   <div class="title">
     <transition name='bounce'>
-     <h2>ABOUT ME</h2> 
+     <h2 data-aos="fade-up">ABOUT ME</h2> 
       </transition>
       <div class="line"></div>
-     <h5>HOPE TO KNOW YOU AFTER</h5>
+     <h5 data-aos="fade-up">HOPE TO KNOW YOU AFTER</h5>
     
   </div>
   
-  <div class="card border-0">
+  <div class="card border-0"  data-aos="fade-right">
       <div class="row">
      <img class="photo" src="../assets/said.jpg" alt="photo">
       </div>
@@ -54,9 +54,6 @@ export default {
       display: true
     }
   },
-  components:{
-    animate
-  }
 }
 </script>
 
