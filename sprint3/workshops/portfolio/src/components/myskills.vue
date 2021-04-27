@@ -74,7 +74,14 @@
             <img alt="ERR" src="../assets/logo/github.png">
             <p>Git/Github</p>
           </div>
-         
+         <div class="col-2">
+            <img alt="ERR" src="../assets/logo/sass.png">
+            <p>SASS</p>
+          </div>
+          <div class="col-2">
+            <img alt="ERR" src="../assets/logo/bootstrap.png">
+            <p>Bootstrap</p>
+          </div>
         </div>
       </div>
     </div>

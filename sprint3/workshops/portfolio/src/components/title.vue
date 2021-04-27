@@ -17,7 +17,7 @@ export default {
 
 <style lang="scss" scoped>
 .shake {
-  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  animation: shake 0.85s cubic-bezier(0.36, 0.07, 0.19, 0.97) both 3;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   perspective: 1000px;
