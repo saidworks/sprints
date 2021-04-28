@@ -1,5 +1,5 @@
 <template>
-    <div class="projects">
+    <div class="container">
         <div class="bg-primary text-light">
         
             <!-- title  -->
@@ -16,7 +16,7 @@
             </div>
 
 
-            <table>
+            <table >
 
                 <tr data-aos="fade-down"
      data-aos-easing="linear"
