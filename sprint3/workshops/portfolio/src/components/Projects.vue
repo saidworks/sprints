@@ -15,8 +15,7 @@
             </div>
             </div>
 
-
-            <table >
+            <!-- <table >
 
                 <tr data-aos="fade-down"
      data-aos-easing="linear"
@@ -191,8 +190,8 @@
                 </tr>
 
 
-            </table>
-
+            </table> -->
+<animatex></animatex>
 
         </div>
 
@@ -212,8 +211,11 @@
     </div>
 </template>
 <script>
+import animatex from './animate.vue'
+
 export default {
-    name: 'Projects',    
+  components: { animatex },
+    name: 'Projects',  
         
 
 }
@@ -234,7 +236,7 @@ export default {
 
 
 img{
-    width: 100%;
+    width: 20%;
     border-radius: 7px;
     border: 1px solid white;
 }

@@ -1,213 +1,260 @@
- <template>
- <div class="container">
-        <div class="bg-primary text-light">
-        
-            <!-- title  -->
-            <div class="row justify-content-center">
-            <div class="col-8">
-                <div class="text-center">
-                <div class="card-body animate__animated animate__fadeInDown">
-                    <h3 class="card-title text-white">MY PROJECTS</h3>
-                    <p class="card-text text-white">THIS IS MY STORY</p>
-                    <div class="line text-white"></div>
-                </div>
-                </div>
-            </div>
-            </div>
+<template>
 
+<div class="container">
 
-            <table >
-
-                <tr data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
-                    <td class="dt"><p class="text-info me-3">1 week ago</p></td>
-                    <td><pre class="text-white sign s-software">&#60;&#62;</pre></td>
-                    <td>
-                        <div class="flx">
-                            <p class="badges software text-white">SOFTWARE</p>
-                            <p class="text-white">POMODORO TIMER WINDOWS (WORK IN PROGRESS)</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <img alt="POMODORO" src="../assets/img/projects/pomodoro.png">
-                    </td>
-                </tr>
-                <tr data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <p class="text-info"> 
-                            Pomodoro timer GUI using Python tkinter package used for work and break timing following the pomodoro technique. 
-                        </p>
-                        <p class="text-info">Link : <a href="https://github.com/saidworks/python_bootcamp/tree/main/100DaysOfCode/day28_Pomodoro" class="text-white">Link to Github</a></p>
-                    </td>
-                </tr>
-
-
-                <tr data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
-                    <td class="dt"><p class="text-info me-3">1 months ago</p></td>
-                    <td><pre class="text-white sign s-library">&#60;&#62;</pre></td>
-                    <td>
-                        <div class="flx">
-                            <p class="badges software text-white">Software</p>
-                            <p class="text-white">US STATES QUIZ</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <img alt="ERR" src="../assets/img/projects/US_QUIZ.png">
-                    </td>
-                </tr>
-                <tr data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <p class="text-info"> 
-                            A quiz from https://www.sporcle.com/ converted to GUI with an interactive guessing program until user exit it and get a personnalized file containing the US STATES he did not guess.
-                        </p>
-                        <p class="text-info">Link : <a href="https://github.com/saidworks/python_bootcamp/tree/main/100DaysOfCode/day25/us-states-game-end" class="text-white">Link to Github</a></p>
-                    </td>
-                </tr>
-
-
-                <tr data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
-                    <td class="dt"><p class="text-info me-3">2 months ago</p></td>
-                    <td><pre class="text-white sign s-game">&#60;&#62;</pre></td>
-                    <td>
-                        <div class="flx">
-                            <p class="badges game text-white">VIDEO GAME</p>
-                            <p class="text-white">SNAKE</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <img alt="ERR" src="../assets/img/projects/snake.gif">
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <p data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500" class="text-info"> 
-                            2D game snake game using turtle package that record high score. 
-                        </p>
-                        <p class="text-info">Link : <a href="https://github.com/saidworks/python_bootcamp/tree/main/100DaysOfCode/day20" class="text-white"> Link to Github</a></p>
-                    </td>
-                </tr>
-
-
-                <tr data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500"> 
-                    <td class="dt"><p class="text-info me-3">2 months ago</p></td>
-                    <td><pre class="text-white sign s-script">&#60;&#62;</pre></td>
-                    <td>
-                        <div class="flx">
-                            <p class="badges website text-white">WEB APP</p>
-                            <p class="text-white">Is Palindrom</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <img alt="ERR" src="../assets/img/projects/ispalindrom.png">
-                    </td>
-                </tr>
-                <tr data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <p class="text-info"> 
-                            A script written in PHP that tells if the word entered is palindrom
-                        </p>
-                        <p class="text-info">Link : <a href="https://github.com/saidworks/palindrom" class="text-white">https://github.com/saidworks/palindrom</a></p>
-                    </td>
-                </tr>
-                <tr data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
-                    <td class="dt"><p class="text-info me-3">1 month ago</p></td>
-                    <td><pre class="text-white sign s-website">&#60;&#62;</pre></td>
-                    <td>
-                        <div class="flx">
-                            <p class="badges website text-white">WEBSITE </p>
-                            <p class="text-white">Restaurant dynamic website</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <img alt="ERR" src="../assets/img/projects/restaurant.png">
-                    </td>
-                </tr>
-                <tr data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <p class="text-info"> 
-                          A dynamic website for a restaurant with an admin dashboard for content management and a possibility of users to contact admin.
-                        </p>
-                        <p class="text-info">Link : <a href="https://github.com/saidworks/sprints/tree/main/Sprint_2/Brief/dynamic" class="text-white">Link to Github</a></p>
-                    </td>
-                </tr>
-
-
-            </table>
-
-
-        </div>
-
-      <div class="card text-center">
-  <div class="bg-primary text-white card-header">
-    Said ZITOUNI
-  </div>
-  <div class="card-body">
-    <h5 class=" card-title">My Work</h5>
-    <p class="card-text">Feel free to check out my work on github</p>
-    <a href="https://github.com/saidworks" class="btn btn-primary"> <fa :icon="['fab', 'github']"></fa> </a>
-  </div>
-  <div class="bg-primary card-footer text-muted">
-    &copy; Copyright 2021
-  </div>
-</div>
+    <!-- Page header -->
+    <div class="page-header">
+        <h2>{{title}} </h2>
     </div>
-    </template>
+    <!-- /Page header -->
+
+    <!-- Timeline -->
+    <div class="timeline">
+    
+        <!-- Line component -->
+        <div class="line text-muted"></div>
+
+        <!-- Separator -->
+        <div class="separator text-muted">
+            <time>{{date}}</time>
+        </div>
+        <!-- /Separator -->
+    
+        <!-- Panel -->
+        <article class="panel panel-danger panel-outline">
+    
+            <!-- Icon -->
+            <div class="panel-heading icon">
+                <i class="glyphicon glyphicon-heart"></i>
+            </div>
+            <!-- /Icon -->
+    
+            <!-- Body -->
+            <div class="panel-body">
+                <strong>Someone</strong> favourited your photo.
+            </div>
+            <!-- /Body -->
+    
+        </article>
+        <!-- /Panel -->
+    
+        <!-- Panel -->
+        <article class="panel panel-default panel-outline">
+    
+            <!-- Icon -->
+            <div class="panel-heading icon">
+                <i class="glyphicon glyphicon-picture"></i>
+            </div>
+            <!-- /Icon -->
+    
+            <!-- Body -->
+            <div class="panel-body">
+               <img :alt="img[1]" :src="img[0]">
+            </div>
+            <!-- /Body -->
+    
+        </article>
+        <!-- /Panel -->
+    
+        <!-- Panel -->
+        <article class="panel panel-primary">
+    
+            <!-- Icon -->
+            <div class="panel-heading icon">
+                <i class="glyphicon glyphicon-plus"></i>
+            </div>
+            <!-- /Icon -->
+    
+            <!-- Heading -->
+            <div class="panel-heading">
+                <h2 class="panel-title" type='type'>{{type}}</h2>
+            </div>
+            <!-- /Heading -->
+    
+            <!-- Body -->
+            <div class="panel-body">
+                Some new content has been added.
+            </div>
+            <!-- /Body -->
+    
+            <!-- Footer -->
+            <div class="panel-footer">
+                <small>{{img[0]}}</small>
+            </div>
+            <!-- /Footer -->
+    
+        </article>
+        <!-- /Panel -->
+
+        <!-- Separator -->
+        <div class="separator text-muted">
+            <time>25. 3. 2015</time>
+        </div>
+        <!-- /Separator -->
+    
+        <!-- Panel -->
+        <article class="panel panel-success">
+    
+            <!-- Icon -->
+            <div class="panel-heading icon">
+                <i class="glyphicon glyphicon-plus"></i>
+            </div>
+            <!-- /Icon -->
+    
+            <!-- Heading -->
+            <div class="panel-heading">
+                <h2 class="panel-title">New content added</h2>
+            </div>
+            <!-- /Heading -->
+    
+            <!-- Body -->
+            <div class="panel-body">
+                Anything you can do with <code>.panel</code>, can be done in timeline too!
+            </div>
+            <!-- /Body -->
+    
+            <!-- List group -->
+            <ul class="list-group">
+                <li class="list-group-item">Like</li>
+                <li class="list-group-item">list</li>
+                <li class="list-group-item">groups</li>
+                <li class="list-group-item">and</li>
+                <li class="list-group-item">tables</li>
+            </ul>
+    
+        </article>
+        <!-- /Panel -->
+    
+        <!-- Panel -->
+        <article class="panel panel-info panel-outline">
+    
+            <!-- Icon -->
+            <div class="panel-heading icon">
+                <i class="glyphicon glyphicon-info-sign"></i>
+            </div>
+            <!-- /Icon -->
+    
+            <!-- Body -->
+            <div class="panel-body">
+                That is all.
+            </div>
+            <!-- /Body -->
+    
+        </article>
+        <!-- /Panel -->
+    
+    </div>
+   
+
+</div>
+
+</template>
+
+<script>
+export default {
+        name: 'timeline',
+        data: function(){
+            return{
+                title: 'Promodoro technique',
+                date:'29/04/2021',
+                type: 'GUI/Timer',
+                img: [require("../assets/img/projects/pomodoro.png"),'POMODORO']
+
+            }
+        }
+}
+</script>
+
+<style>
+.timeline {
+    position: relative;
+    padding: 21px 0px 10px;
+    margin-top: 4px;
+    margin-bottom: 30px;
+}
+
+.timeline .line {
+    position: absolute;
+    width: 4px;
+    display: block;
+    background: currentColor;
+    top: 0px;
+    bottom: 0px;
+    margin-left: 30px;
+}
+
+.timeline .separator {
+    border-top: 1px solid currentColor;
+    padding: 5px;
+    padding-left: 40px;
+    font-style: italic;
+    font-size: .9em;
+    margin-left: 30px;
+}
+
+.timeline .line::before { top: -4px; }
+.timeline .line::after { bottom: -4px; }
+.timeline .line::before,
+.timeline .line::after {
+    content: '';
+    position: absolute;
+    left: -4px;
+    width: 12px;
+    height: 12px;
+    display: block;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.timeline .panel {
+    position: relative;
+    margin: 10px 0px 21px 70px;
+    clear: both;
+}
+
+.timeline .panel::before {
+    position: absolute;
+    display: block;
+    top: 8px;
+    left: -24px;
+    content: '';
+    width: 0px;
+    height: 0px;
+    border: inherit;
+    border-width: 12px;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.timeline .panel .panel-heading.icon * { font-size: 20px; vertical-align: middle; line-height: 40px; }
+.timeline .panel .panel-heading.icon {
+    position: absolute;
+    left: -59px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 0px;
+    border-radius: 50%;
+    text-align: center;
+    float: left;
+}
+
+.timeline .panel-outline {
+    border-color: transparent;
+    background: transparent;
+    box-shadow: none;
+}
+
+.timeline .panel-outline .panel-body {
+    padding: 10px 0px;
+}
+
+.timeline .panel-outline .panel-heading:not(.icon),
+.timeline .panel-outline .panel-footer {
+    display: none;
+}
+img {
+    max-width: 50vw;
+}
+</style>

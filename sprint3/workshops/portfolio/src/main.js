@@ -9,7 +9,8 @@ import { faFacebookF, faTwitter, faLinkedin, faGoogle, faGithub } from '@fortawe
 import 'animate.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
-// ..
+
+// .. initialize AOS
 AOS.init();
 library.add(faPhone, faTwitter, faLinkedin, faFacebookF, faGoogle, faGithub)
 
