@@ -1,10 +1,10 @@
 <template>
 
-<div class="container">
+<div v-for="item in projects" :key='item.title' class="container">
 
     <!-- Page header -->
     <div class="page-header">
-        <h2>{{title}} </h2>
+        <h2>{{item.title}} </h2>
     </div>
     <!-- /Page header -->
 
@@ -16,7 +16,7 @@
 
         <!-- Separator -->
         <div class="separator text-muted">
-            <time>{{date}}</time>
+            <time>{{item.date}}</time>
         </div>
         <!-- /Separator -->
     
@@ -31,7 +31,7 @@
     
             <!-- Body -->
             <div class="panel-body">
-                <strong>Someone</strong> favourited your photo.
+                <strong>{{item.subtitle}}</strong>.
             </div>
             <!-- /Body -->
     
@@ -49,7 +49,7 @@
     
             <!-- Body -->
             <div class="panel-body">
-               <img :alt="img[1]" :src="img[0]">
+               <img :alt="item.img[1]" :src="item.img[0]">
             </div>
             <!-- /Body -->
     
@@ -67,81 +67,24 @@
     
             <!-- Heading -->
             <div class="panel-heading">
-                <h2 class="panel-title" type='type'>{{type}}</h2>
+                <h2 class="panel-title" type='type'>{{item.type}}</h2>
             </div>
             <!-- /Heading -->
     
             <!-- Body -->
             <div class="panel-body">
-                Some new content has been added.
+                {{item.description}}
             </div>
             <!-- /Body -->
     
             <!-- Footer -->
             <div class="panel-footer">
-                <small>{{img[0]}}</small>
+                <small><a class="pre-link btn btn-info text-light" :href="item.link">Github</a></small>
             </div>
             <!-- /Footer -->
-    
+  
         </article>
-        <!-- /Panel -->
-
-        <!-- Separator -->
-        <div class="separator text-muted">
-            <time>25. 3. 2015</time>
-        </div>
-        <!-- /Separator -->
-    
-        <!-- Panel -->
-        <article class="panel panel-success">
-    
-            <!-- Icon -->
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-plus"></i>
-            </div>
-            <!-- /Icon -->
-    
-            <!-- Heading -->
-            <div class="panel-heading">
-                <h2 class="panel-title">New content added</h2>
-            </div>
-            <!-- /Heading -->
-    
-            <!-- Body -->
-            <div class="panel-body">
-                Anything you can do with <code>.panel</code>, can be done in timeline too!
-            </div>
-            <!-- /Body -->
-    
-            <!-- List group -->
-            <ul class="list-group">
-                <li class="list-group-item">Like</li>
-                <li class="list-group-item">list</li>
-                <li class="list-group-item">groups</li>
-                <li class="list-group-item">and</li>
-                <li class="list-group-item">tables</li>
-            </ul>
-    
-        </article>
-        <!-- /Panel -->
-    
-        <!-- Panel -->
-        <article class="panel panel-info panel-outline">
-    
-            <!-- Icon -->
-            <div class="panel-heading icon">
-                <i class="glyphicon glyphicon-info-sign"></i>
-            </div>
-            <!-- /Icon -->
-    
-            <!-- Body -->
-            <div class="panel-body">
-                That is all.
-            </div>
-            <!-- /Body -->
-    
-        </article>
-        <!-- /Panel -->
+ 
     
     </div>
    
@@ -154,12 +97,49 @@
 export default {
         name: 'timeline',
         data: function(){
-            return{
-                title: 'Promodoro technique',
+            return {
+                projects:{
+                pomodoro:{
+                title: 'Promodoro technique GUI',
+                subtitle:'Built using tkinter library',
+                description: 'A timer that allows you to follow pomodoro technique, with appropriate alert for both short and long break',
                 date:'29/04/2021',
                 type: 'GUI/Timer',
-                img: [require("../assets/img/projects/pomodoro.png"),'POMODORO']
-
+                img: [require("../assets/img/projects/pomodoro.png"),'POMODORO'],
+                link:"https://github.com/saidworks/python_bootcamp/tree/main/100DaysOfCode/day28_Pomodoro"},   
+                US_QUIZ:{
+                title: 'US STATES QUIZ',
+                subtitle:'Built using pandas and turtle packages',
+                description: 'A quiz from https://www.sporcle.com/ converted to GUI with an interactive guessing program until user exit it and get a personnalized file containing the US STATES he did not guess.',
+                date:'31/03/2021',
+                type: 'GUI/GAME',
+                img: [require("../assets/img/projects/US_QUIZ.png"),'US STATES QUIZ'],
+                link:"https://github.com/saidworks/python_bootcamp/tree/main/100DaysOfCode/day25/us-states-game-end"},SNAKE:{
+                title: 'SNAKE',
+                subtitle:'Built using turtle package',
+                description: '2D game snake similar to nokia\'s famous one, built using turtle package and random module it can record player high score and show it each time.',
+                date:'03/4/2021',
+                type: '2D/GAME',
+                img: [require("../assets/img/projects/snake.gif"),'SNAKE GAME'],
+                link:"https://github.com/saidworks/python_bootcamp/tree/main/100DaysOfCode/day20" },
+                isPalindrom:{
+                title: 'Is Palindrom',
+                subtitle:'Built using turtle package',
+                description: '  A script written in PHP that tells if the word entered is palindrom',
+                date:'07/3/2021',
+                type: 'Web app',
+                img: [require("../assets/img/projects/ispalindrom.png"),'Restaurant'],
+                link:"https://github.com/saidworks/palindrom"},
+                 restaurant:{
+                title: 'Restaurant dynamic website',
+                subtitle:'Built using turtle package',
+                description: '   A dynamic website for a restaurant with an admin dashboard for content management and a possibility of users to contact admin.',
+                date:'28/3/2021',
+                type: 'Website',
+                img: [require("../assets/img/projects/restaurant.png"),'Is it Palindrom?'],
+                link:"https://github.com/saidworks/sprints/tree/main/Sprint_2/Brief/dynamic" }
+                
+            }
             }
         }
 }

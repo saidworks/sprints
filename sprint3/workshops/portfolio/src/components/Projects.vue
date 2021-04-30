@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    
         <div class="bg-primary text-light">
         
             <!-- title  -->
@@ -14,184 +14,7 @@
                 </div>
             </div>
             </div>
-
-            <!-- <table >
-
-                <tr data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
-                    <td class="dt"><p class="text-info me-3">1 week ago</p></td>
-                    <td><pre class="text-white sign s-software">&#60;&#62;</pre></td>
-                    <td>
-                        <div class="flx">
-                            <p class="badges software text-white">SOFTWARE</p>
-                            <p class="text-white">POMODORO TIMER WINDOWS (WORK IN PROGRESS)</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <img alt="POMODORO" src="../assets/img/projects/pomodoro.png">
-                    </td>
-                </tr>
-                <tr data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <p class="text-info"> 
-                            Pomodoro timer GUI using Python tkinter package used for work and break timing following the pomodoro technique. 
-                        </p>
-                        <p class="text-info">Link : <a href="https://github.com/saidworks/python_bootcamp/tree/main/100DaysOfCode/day28_Pomodoro" class="text-white">Link to Github</a></p>
-                    </td>
-                </tr>
-
-
-                <tr data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
-                    <td class="dt"><p class="text-info me-3">1 months ago</p></td>
-                    <td><pre class="text-white sign s-library">&#60;&#62;</pre></td>
-                    <td>
-                        <div class="flx">
-                            <p class="badges software text-white">Software</p>
-                            <p class="text-white">US STATES QUIZ</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <img alt="ERR" src="../assets/img/projects/US_QUIZ.png">
-                    </td>
-                </tr>
-                <tr data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <p class="text-info"> 
-                            A quiz from https://www.sporcle.com/ converted to GUI with an interactive guessing program until user exit it and get a personnalized file containing the US STATES he did not guess.
-                        </p>
-                        <p class="text-info">Link : <a href="https://github.com/saidworks/python_bootcamp/tree/main/100DaysOfCode/day25/us-states-game-end" class="text-white">Link to Github</a></p>
-                    </td>
-                </tr>
-
-
-                <tr data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
-                    <td class="dt"><p class="text-info me-3">2 months ago</p></td>
-                    <td><pre class="text-white sign s-game">&#60;&#62;</pre></td>
-                    <td>
-                        <div class="flx">
-                            <p class="badges game text-white">VIDEO GAME</p>
-                            <p class="text-white">SNAKE</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <img alt="ERR" src="../assets/img/projects/snake.gif">
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <p data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500" class="text-info"> 
-                            2D game snake game using turtle package that record high score. 
-                        </p>
-                        <p class="text-info">Link : <a href="https://github.com/saidworks/python_bootcamp/tree/main/100DaysOfCode/day20" class="text-white"> Link to Github</a></p>
-                    </td>
-                </tr>
-
-
-                <tr data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500"> 
-                    <td class="dt"><p class="text-info me-3">2 months ago</p></td>
-                    <td><pre class="text-white sign s-script">&#60;&#62;</pre></td>
-                    <td>
-                        <div class="flx">
-                            <p class="badges website text-white">WEB APP</p>
-                            <p class="text-white">Is Palindrom</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <img alt="ERR" src="../assets/img/projects/ispalindrom.png">
-                    </td>
-                </tr>
-                <tr data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <p class="text-info"> 
-                            A script written in PHP that tells if the word entered is palindrom
-                        </p>
-                        <p class="text-info">Link : <a href="https://github.com/saidworks/palindrom" class="text-white">https://github.com/saidworks/palindrom</a></p>
-                    </td>
-                </tr>
-                <tr data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
-                    <td class="dt"><p class="text-info me-3">1 month ago</p></td>
-                    <td><pre class="text-white sign s-website">&#60;&#62;</pre></td>
-                    <td>
-                        <div class="flx">
-                            <p class="badges website text-white">WEBSITE </p>
-                            <p class="text-white">Restaurant dynamic website</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <img alt="ERR" src="../assets/img/projects/restaurant.png">
-                    </td>
-                </tr>
-                <tr data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <p class="text-info"> 
-                          A dynamic website for a restaurant with an admin dashboard for content management and a possibility of users to contact admin.
-                        </p>
-                        <p class="text-info">Link : <a href="https://github.com/saidworks/sprints/tree/main/Sprint_2/Brief/dynamic" class="text-white">Link to Github</a></p>
-                    </td>
-                </tr>
-
-
-            </table> -->
-<animatex></animatex>
+            <animatex></animatex>
 
         </div>
 
@@ -208,7 +31,7 @@
     &copy; Copyright 2021
   </div>
 </div>
-    </div>
+    
 </template>
 <script>
 import animatex from './animate.vue'

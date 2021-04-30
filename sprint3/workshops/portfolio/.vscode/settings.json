@@ -4,5 +4,7 @@
     "vetur.validation.template": true,
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
-    }
+    },
+    "xd.globalEditor": false,
+    "xd.lastPackage": "/C:/Users/saidworks/Desktop/Tutorials/bootstrap/bootstrap-dsp/bootstrap-dsp"
   }
