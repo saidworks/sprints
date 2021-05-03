@@ -141,7 +141,11 @@ export default {
                 
             }
             }
+        },
+        created() {
+            console.log(JSON.stringify(this.projects));
         }
+
 }
 </script>
 
