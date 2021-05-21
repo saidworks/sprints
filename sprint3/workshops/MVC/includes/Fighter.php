@@ -13,10 +13,21 @@ class Fighter{
         $this->dexterity = $dexterity;
         $this->life = $life;
     }
-    public function fight($fighter){
-        $attack  = rand(1,$this->strength) - rand(1,$this->dexterity);
-        if ($attack>0 && $fighter->life>=0){
-        $fighter->life -= $attack; 
+    public function fight($defender){
+        $attack  = rand(1,$this->strength) - rand(1,$defender->dexterity);
+        if ($attack>0 && $this->life>=0){
+        $defender->life -= $attack; 
     }
     }
+    public function __get($property){
+        if(property_exists($this,$property)){
+        return $this->property;
+    }
+    }
+    public function __set($property,$value){
+        if(property_exists($this,$property)){
+            $this->property = $value ;
+        }
+    }
+
 }

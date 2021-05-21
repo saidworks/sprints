@@ -23,3 +23,5 @@ echo "Game start $hercules->name : $hercules->life vs $neme->name : $neme->life 
     }
  
     echo " $neme->name : $neme->life vs $hercules->name : $hercules->life \n";
+
+    ?>
