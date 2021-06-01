@@ -105,17 +105,17 @@
             $mail->SMTPAuth = true;
 
             //Username to use for SMTP authentication - use full email address for gmail
-            $mail->Username = 'said.storage@gmail.com';
+            $mail->Username = 'email';
 
             //Password to use for SMTP authentication
-            $mail->Password = '2443421@Sa';
+            $mail->Password = 'password';
 
             //Set who the message is to be sent from
-            $mail->setFrom('said.storage@gmail.com', 'Said Green');
+            $mail->setFrom('email', 'name');
 
 
             //Set who the message is to be sent to
-            $mail->addAddress('zitouni.sd@gmail.com');
+            $mail->addAddress('receiver email');
 
             //Set the subject line
             $mail->Subject = 'PHPMailer GMail SMTP test';
